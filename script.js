@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             popupAnchor: [0, -40]
         });
 
-        // ✅✅✅ 수정된 부분: LNG -> HQ_LNG로 변경 ✅✅✅
+        // 결정적이었던 오타 수정 완료
         L.marker([HQ_LAT, HQ_LNG], { icon: hqIcon }).addTo(map)
             .bindPopup('<b>HQ 🛡️ 학동 본부</b><br>출정 준비 완료!');
     }
@@ -97,17 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. 지도 마커 표시 함수 (맛집 몬스터)
     // ==============================================
     function displayMapMarkers(restaurants) {
+        // 타입에 따라 CSS 클래스를 반환
         function getIconClassForType(type) {
             switch (type) {
-                case '한식': return 'icon-korean';
-                case '양식': return 'icon-western';
-                case '중식': return 'icon-chinese';
-                case '일식': return 'icon-japanese';
-                default: return 'icon-other';
+                case '한식': return 'type-korean';
+                case '양식': return 'type-western';
+                case '중식': return 'type-chinese';
+                case '일식': return 'type-japanese';
+                default: return 'type-other';
             }
         }
 
         restaurants.forEach(restaurant => {
+            // 기본 클래스 + 타입별 클래스를 함께 적용
             const iconClass = getIconClassForType(restaurant.type);
             const pixelIcon = L.divIcon({
                 className: `pixel-marker-icon ${iconClass}`,
@@ -117,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const marker = L.marker([restaurant.lat, restaurant.lng], { icon: pixelIcon }).addTo(map);
-            marker.bindPopup(`<b>${restaurant.name}</b> (${restaurant.type})<br>EXP: +${restaurant.rating}<br>시간: ${restaurant.distance}`);
+            marker.bindPopup(`<b>${restaurant.name} (${restaurant.type})</b><br>EXP: +${restaurant.rating}<br>시간: ${restaurant.distance}`);
         });
     }
 

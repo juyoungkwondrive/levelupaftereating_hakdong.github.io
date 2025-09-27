@@ -244,7 +244,6 @@ main {
     gap: 40px;
     flex-wrap: wrap;
 }
-/* ✅ 옵션 그룹 스타일 추가 */
 .option-group {
     margin-bottom: 15px;
 }
@@ -274,8 +273,6 @@ main {
     content: '[X]';
     color: #e5b0c4; 
 }
-
-/* ✅ 픽셀 스타일 select 드롭다운 메뉴 */
 .pixel-select {
     font-family: 'Galmuri11', sans-serif;
     background-color: #f7f0e3;
@@ -375,7 +372,7 @@ footer {
 
 
 /* ============================================== */
-/* Leaflet 지도 관련 커스텀 스타일              */
+/* Leaflet 지도 관련 커S텀 스타일              */
 /* ============================================== */
 .pixel-marker-icon, .hq-marker-icon {
     background-size: contain;
@@ -384,21 +381,21 @@ footer {
     border: none !important;
 }
 
-.pixel-marker-icon {
+/* 모든 아이콘이 이 기본 이미지를 공유 */
+.pixel-marker-icon { 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23d68a9f"/><rect x="12" y="4" width="8" height="4" fill="%23d68a9f"/><rect x="10" y="8" width="12" height="4" fill="%23d68a9f"/><rect x="8" y="12" width="16" height="12" fill="%23d68a9f"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>'); 
     width: 32px !important;
     height: 32px !important;
     margin-left: -16px !important;
     margin-top: -32px !important;
 }
-.icon-korean {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="16" width="20" height="12" fill="%237d4d42"/><rect x="8" y="12" width="4" height="4" fill="%237d4d42"/><rect x="20" y="12" width="4" height="4" fill="%237d4d42"/><rect x="10" y="8" width="4" height="4" fill="%23e5b0c4"/><rect x="18" y="4" width="4" height="4" fill="%23e5b0c4"/><rect x="14" y="6" width="4" height="4" fill="%23e5b0c4"/></svg>');
-}
-.icon-western {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M4 4 L16 30 L28 4 Z" fill="%23f7e09e"/><rect x="10" y="12" width="4" height="4" fill="%23d68a9f"/><rect x="18" y="10" width="4" height="4" fill="%23d68a9f"/><rect x="14" y="18" width="4" height="4" fill="%23d68a9f"/></svg>');
-}
-.icon-chinese, .icon-japanese, .icon-other {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23d68a9f"/><rect x="12" y="4" width="8" height="4" fill="%23d68a9f"/><rect x="10" y="8" width="12" height="4" fill="%23d68a9f"/><rect x="8" y="12" width="16" height="12" fill="%23d68a9f"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>');
-}
+
+/* CSS filter로 타입별 색상만 변경하는 안정적인 방식 */
+.type-korean { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4)) hue-rotate(0deg); }
+.type-western { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4)) hue-rotate(90deg); }
+.type-chinese { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4)) hue-rotate(180deg); }
+.type-japanese { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4)) hue-rotate(45deg); }
+.type-other { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4)) grayscale(100%); }
 
 
 .hq-marker-icon { 
