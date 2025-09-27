@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "용사의 국밥집",
+    "type": "한식",
     "distance": "도보 5분",
     "distanceMinutes": 5,
     "rating": 5,
@@ -18,6 +19,7 @@
   {
     "id": 2,
     "name": "마법사의 파스타 공방",
+    "type": "양식",
     "distance": "도보 10분",
     "distanceMinutes": 10,
     "rating": 4,

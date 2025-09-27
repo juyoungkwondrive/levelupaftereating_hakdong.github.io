@@ -97,16 +97,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. 지도 마커 표시 함수 (맛집 몬스터)
     // ==============================================
     function displayMapMarkers(restaurants) {
-        const pixelIcon = L.divIcon({
-            className: 'pixel-marker-icon',
-            iconSize: [32, 32],
-            iconAnchor: [16, 32],
-            popupAnchor: [0, -32]
-        });
+        // ✅ 몬스터 타입에 따른 아이콘 클래스를 매핑하는 함수
+        function getIconClassForType(type) {
+            switch (type) {
+                case '한식': return 'icon-korean';
+                case '양식': return 'icon-western';
+                case '중식': return 'icon-chinese';
+                case '일식': return 'icon-japanese';
+                default: return 'icon-other';
+            }
+        }
 
         restaurants.forEach(restaurant => {
+            // ✅ 레스토랑 타입에 맞는 아이콘 클래스 지정
+            const iconClass = getIconClassForType(restaurant.type);
+            const pixelIcon = L.divIcon({
+                className: `pixel-marker-icon ${iconClass}`, // ✅ 기본 클래스와 타입별 클래스 동시 적용
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32]
+            });
+
             const marker = L.marker([restaurant.lat, restaurant.lng], { icon: pixelIcon }).addTo(map);
-            marker.bindPopup(`<b>${restaurant.name}</b><br>EXP: +${restaurant.rating}<br>시간: ${restaurant.distance}`);
+            // ✅ 팝업에 몬스터 타입 정보 추가
+            marker.bindPopup(`<b>${restaurant.name}</b> (${restaurant.type})<br>EXP: +${restaurant.rating}<br>시간: ${restaurant.distance}`);
         });
     }
 
@@ -133,10 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 totalGold = parseInt(priceString, 10) || 0;
             }
 
+            // ✅ 몬스터 타입 표시 추가
             card.innerHTML = `
                 <img src="${restaurant.photo}" alt="${restaurant.name} 몬스터 이미지">
                 <h3>No.${restaurant.id} ${restaurant.name}</h3>
                 <div class="stats">
+                    <span class="type">🍖 타입: ${restaurant.type}</span>
                     <span class="exp">✨ 획득 EXP: +${restaurant.rating}</span>
                     <span class="gold">💰 예상 GOLD: ${totalGold.toLocaleString()}</span>
                     <span class="time">⏰ 퀘스트 시간: ${restaurant.distance}</span>
@@ -185,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 resultItem.innerHTML = `
                     <span class="medal">${medals[index]}</span>
-                    <span class="name">${item.name}</span>
+                    <span class="name">${item.name} (${item.type})</span>
                     <span class="exp-gold">✨ EXP +${item.rating} 💰 GOLD ${totalGold.toLocaleString()}</span>
                 `;
                 resultsContainer.appendChild(resultItem);
@@ -251,4 +267,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // 앱 시작 시 가장 먼저 시작 화면을 표시
     showScreen('splash-screen');
 });
-

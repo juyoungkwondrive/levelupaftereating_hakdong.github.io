@@ -222,9 +222,14 @@ main {
     color: #3b2c24; 
     text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
 }
-.bestiary-card .stats .exp, .bestiary-card .stats .time, .bestiary-card .stats .difficulty, .bestiary-card .stats .gold {
+/* ✅ 각 스탯별 색상 강조 */
+.bestiary-card .stats .type, .bestiary-card .stats .exp, .bestiary-card .stats .time, .bestiary-card .stats .difficulty, .bestiary-card .stats .gold {
     color: #7d4d42; 
     font-weight: bold;
+}
+/* ✅ 타입 스탯 배경색 변경 */
+.bestiary-card .stats .type {
+    background-color: #f7e09e;
 }
 
 
@@ -363,13 +368,31 @@ footer {
     background-color: transparent !important;
     border: none !important;
 }
-.pixel-marker-icon { 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23d68a9f"/><rect x="12" y="4" width="8" height="4" fill="%23d68a9f"/><rect x="10" y="8" width="12" height="4" fill="%23d68a9f"/><rect x="8" y="12" width="16" height="12" fill="%23d68a9f"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>'); 
+
+/* ✅ 몬스터 마커 공통 스타일 */
+.pixel-marker-icon {
     width: 32px !important;
     height: 32px !important;
     margin-left: -16px !important;
     margin-top: -32px !important;
 }
+/* ✅ 타입별 몬스터 아이콘 (SVG) */
+.icon-korean { /* 한식: 뚝배기 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="16" width="20" height="12" fill="%237d4d42"/><rect x="8" y="12" width="4" height="4" fill="%237d4d42"/><rect x="20" y="12" width="4" height="4" fill="%237d4d42"/><rect x="10" y="8" width="4" height="4" fill="%23e5b0c4"/><rect x="18" y="4" width="4" height="4" fill="%23e5b0c4"/><rect x="14" y="6" width="4" height="4" fill="%23e5b0c4"/></svg>');
+}
+.icon-western { /* 양식: 피자 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M4 4 L16 30 L28 4 Z" fill="%23f7e09e"/><rect x="10" y="12" width="4" height="4" fill="%23d68a9f"/><rect x="18" y="10" width="4" height="4" fill="%23d68a9f"/><rect x="14" y="18" width="4" height="4" fill="%23d68a9f"/></svg>');
+}
+.icon-chinese { /* 중식: 만두 (미구현, 기본 아이콘 사용) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23d68a9f"/><rect x="12" y="4" width="8" height="4" fill="%23d68a9f"/><rect x="10" y="8" width="12" height="4" fill="%23d68a9f"/><rect x="8" y="12" width="16" height="12" fill="%23d68a9f"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>');
+}
+.icon-japanese { /* 일식: 초밥 (미구현, 기본 아이콘 사용) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23d68a9f"/><rect x="12" y="4" width="8" height="4" fill="%23d68a9f"/><rect x="10" y="8" width="12" height="4" fill="%23d68a9f"/><rect x="8" y="12" width="16" height="12" fill="%23d68a9f"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>');
+}
+.icon-other { /* 기타: 기본 몬스터 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23d68a9f"/><rect x="12" y="4" width="8" height="4" fill="%23d68a9f"/><rect x="10" y="8" width="12" height="4" fill="%23d68a9f"/><rect x="8" y="12" width="16" height="12" fill="%23d68a9f"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>');
+}
+
 
 .hq-marker-icon { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23f7e09e"/><rect x="12" y="4" width="8" height="4" fill="%23f7e09e"/><rect x="10" y="8" width="12" height="4" fill="%23f7e09e"/><rect x="8" y="12" width="16" height="4" fill="%23f7e09e"/><rect x="8" y="16" width="4" height="4" fill="%23f7e09e"/><rect x="20" y="16" width="4" height="4" fill="%23f7e09e"/><rect x="8" y="20" width="16" height="4" fill="%23f7e09e"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>'); 
@@ -435,4 +458,3 @@ footer {
     .result-item .medal { font-size: 1.3em; }
     .result-item .exp-gold { font-size: 0.7em; }
 }
-
