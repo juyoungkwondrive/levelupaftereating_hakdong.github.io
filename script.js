@@ -26,11 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextScreen) {
             nextScreen.classList.add('active');
 
-            // ✅ 화면 전환 애니메이션 후 지도가 깨지는 것을 방지하는 코드
             if (screenId === 'map-screen' && map) {
                 setTimeout(() => {
                     map.invalidateSize();
-                }, 400); // CSS transition 시간과 일치
+                }, 400); 
             }
         }
     }
@@ -77,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             popupAnchor: [0, -40]
         });
 
-        L.marker([HQ_LAT, HQ_LNG], { icon: hqIcon }).addTo(map)
+        L.marker([HQ_LAT, LNG], { icon: hqIcon }).addTo(map)
             .bindPopup('<b>HQ 🛡️ 학동 본부</b><br>출정 준비 완료!');
     }
     
@@ -97,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. 지도 마커 표시 함수 (맛집 몬스터)
     // ==============================================
     function displayMapMarkers(restaurants) {
-        // ✅ 몬스터 타입에 따른 아이콘 클래스를 매핑하는 함수
         function getIconClassForType(type) {
             switch (type) {
                 case '한식': return 'icon-korean';
@@ -109,17 +107,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         restaurants.forEach(restaurant => {
-            // ✅ 레스토랑 타입에 맞는 아이콘 클래스 지정
             const iconClass = getIconClassForType(restaurant.type);
             const pixelIcon = L.divIcon({
-                className: `pixel-marker-icon ${iconClass}`, // ✅ 기본 클래스와 타입별 클래스 동시 적용
+                className: `pixel-marker-icon ${iconClass}`,
                 iconSize: [32, 32],
                 iconAnchor: [16, 32],
                 popupAnchor: [0, -32]
             });
 
             const marker = L.marker([restaurant.lat, restaurant.lng], { icon: pixelIcon }).addTo(map);
-            // ✅ 팝업에 몬스터 타입 정보 추가
             marker.bindPopup(`<b>${restaurant.name}</b> (${restaurant.type})<br>EXP: +${restaurant.rating}<br>시간: ${restaurant.distance}`);
         });
     }
@@ -147,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 totalGold = parseInt(priceString, 10) || 0;
             }
 
-            // ✅ 몬스터 타입 표시 추가
             card.innerHTML = `
                 <img src="${restaurant.photo}" alt="${restaurant.name} 몬스터 이미지">
                 <h3>No.${restaurant.id} ${restaurant.name}</h3>
@@ -167,9 +162,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // 7. 랜덤 뽑기 기능
     // ==============================================
     drawBtn.addEventListener('click', () => {
+        // ✅ 선택된 타입과 정렬 옵션 가져오기
+        const selectedType = document.getElementById('type-option').value;
         const sortOption = document.querySelector('input[name="sort-option"]:checked').value;
         
-        let sortedList = [...allRestaurants];
+        // ✅ 타입에 따라 레스토랑 목록 필터링
+        let filteredList = allRestaurants;
+        if (selectedType !== 'all') {
+            filteredList = allRestaurants.filter(r => r.type === selectedType);
+        }
+
+        // ✅ 필터링된 목록을 복사하여 정렬
+        let sortedList = [...filteredList];
         
         if (sortOption === 'rating') {
             sortedList.sort((a, b) => b.rating - a.rating);
@@ -177,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sortedList.sort((a, b) => a.distanceMinutes - b.distanceMinutes);
         }
         
+        // 필터링 및 정렬된 목록을 랜덤으로 섞기
         for (let i = sortedList.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [sortedList[i], sortedList[j]] = [sortedList[j], sortedList[i]];
@@ -207,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultsContainer.appendChild(resultItem);
             });
         } else {
-            resultsContainer.innerHTML = '<p class="exp-gold">퀘스트 실패! 뽑을 식당이 없습니다.</p>';
+            resultsContainer.innerHTML = '<p class="exp-gold">퀘스트 실패! 해당 타입의 몬스터가 없습니다.</p>';
         }
     });
 
@@ -235,7 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeScreen = document.querySelector('.screen.active');
         if (!activeScreen || activeScreen.id === 'splash-screen') return;
 
-        // 지도 위에서는 스와이프 동작 방지
         const target = event.target;
         if (target.closest('#map')) return;
 
@@ -250,9 +254,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentIndex === -1) return;
 
         let nextIndex;
-        if (deltaX < 0) { // 왼쪽으로 스와이프
+        if (deltaX < 0) {
             nextIndex = (currentIndex + 1) % swipeScreens.length;
-        } else { // 오른쪽으로 스와이프
+        } else { 
             nextIndex = (currentIndex - 1 + swipeScreens.length) % swipeScreens.length;
         }
         
@@ -264,6 +268,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 앱 시작 시 가장 먼저 시작 화면을 표시
     showScreen('splash-screen');
 });

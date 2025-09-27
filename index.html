@@ -14,7 +14,6 @@
             <h1>밥 먹고 레벨업! 학동 맛집!</h1>
             <h2>점심 퀘스트를 시작하라!</h2>
             <p class="quest-msg">용사여, 숟가락 무기 들고 던전으로 떠나 전리품을 획득하라!</p>
-            <!-- ✅ <p> 태그를 <button>으로 변경하고 id와 class를 추가했습니다 -->
             <button id="start-btn" class="pixel-btn large touch-to-start">출정 준비!</button>
         </div>
     </section>
@@ -42,8 +41,7 @@
                 <h2>(학동 던전 출몰 몬스터 리스트)</h2>
             </header>
             <div id="bestiary-list" class="bestiary-grid">
-                <!-- 몬스터 도감 리스트가 여기에 표시됩니다. -->
-            </div>
+                </div>
             <footer>
                 <button id="back-to-map-from-bestiary-btn" class="pixel-btn">🗺️ 본부로 복귀</button>
             </footer>
@@ -57,19 +55,31 @@
             </header>
             <div class="randomizer-content">
                 <div class="options">
-                    <h2>정렬 기준 선택:</h2>
-                    <label>
-                        <input type="radio" name="sort-option" value="rating" checked> ⭐ 최고 EXP 획득 순
-                    </label>
-                    <label>
-                        <input type="radio" name="sort-option" value="distance"> 👟 최단 거리 이동 순
-                    </label>
+                    <div class="option-group">
+                        <h2>몬스터 타입 선택:</h2>
+                        <select id="type-option" class="pixel-select">
+                            <option value="all">전체</option>
+                            <option value="한식">한식</option>
+                            <option value="양식">양식</option>
+                            <option value="중식">중식</option>
+                            <option value="일식">일식</option>
+                            <option value="기타">기타</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <h2>정렬 기준 선택:</h2>
+                        <label>
+                            <input type="radio" name="sort-option" value="rating" checked> ⭐ 최고 EXP 획득 순
+                        </label>
+                        <label>
+                            <input type="radio" name="sort-option" value="distance"> 👟 최단 거리 이동 순
+                        </label>
+                    </div>
                 </div>
                 <button id="draw-btn" class="pixel-btn large">✨ 전리품 획득! (뽑기 시작!) ✨</button>
                 
                 <div id="random-results">
-                    <!-- 랜덤 결과가 여기에 표시됩니다. -->
-                </div>
+                    </div>
             </div>
             <footer>
                 <button id="back-to-map-from-randomizer-btn" class="pixel-btn">🗺️ 본부로 복귀</button>
