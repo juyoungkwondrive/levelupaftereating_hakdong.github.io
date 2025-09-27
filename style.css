@@ -372,7 +372,7 @@ footer {
 
 
 /* ============================================== */
-/* Leaflet 지도 관련 커S텀 스타일              */
+/* Leaflet 지도 관련 커스텀 스타일              */
 /* ============================================== */
 .pixel-marker-icon, .hq-marker-icon {
     background-size: contain;
@@ -381,21 +381,39 @@ footer {
     border: none !important;
 }
 
-/* 모든 아이콘이 이 기본 이미지를 공유 */
+/* 아이콘 공통 스타일: 크기와 위치만 지정 */
 .pixel-marker-icon { 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23d68a9f"/><rect x="12" y="4" width="8" height="4" fill="%23d68a9f"/><rect x="10" y="8" width="12" height="4" fill="%23d68a9f"/><rect x="8" y="12" width="16" height="12" fill="%23d68a9f"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>'); 
     width: 32px !important;
     height: 32px !important;
     margin-left: -16px !important;
     margin-top: -32px !important;
 }
 
-/* CSS filter로 타입별 색상만 변경하는 안정적인 방식 */
-.type-korean { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4)) hue-rotate(0deg); }
-.type-western { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4)) hue-rotate(90deg); }
-.type-chinese { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4)) hue-rotate(180deg); }
-.type-japanese { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4)) hue-rotate(45deg); }
-.type-other { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4)) grayscale(100%); }
+/* 타입별로 각각 다른 모양의 아이콘 지정 */
+/* 한식 (뚝배기) */
+.icon-korean { 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 18 H26 V28 H6Z" fill="%23A0522D"/><path d="M6 18 H4 V24 H6Z" fill="%23A0522D"/><path d="M26 18 H28 V24 H26Z" fill="%23A0522D"/><path d="M10 10 V16 M16 10 V16 M22 10 V16" stroke="%23FFC0CB" stroke-width="2"/></svg>');
+}
+/* 일식 (초밥) */
+.icon-japanese { 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="12" width="20" height="16" fill="white" /><rect x="6" y="12" width="20" height="4" fill="%23FF6347" /><rect x="4" y="10" width="24" height="20" rx="2" fill="none" stroke="black" stroke-width="2"/></svg>');
+}
+/* 중식 (만두) */
+.icon-chinese { 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 26 C6 14 26 14 26 26 Z" fill="%23F5DEB3" stroke="%23DEB887" stroke-width="2"/></svg>');
+}
+/* 양식 (피자) */
+.icon-western { 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M4 4 L16 30 L28 4 Z" fill="%23FFD700"/><circle cx="12" cy="14" r="3" fill="%23DC143C"/><circle cx="20" cy="12" r="3" fill="%23DC143C"/><circle cx="16" cy="20" r="3" fill="%23DC143C"/></svg>');
+}
+/* 카페 (커피잔) */
+.icon-cafe { 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 10 H24 V26 A4 4 0 0 1 20 30 H10 A4 4 0 0 1 6 26Z" fill="white"/><path d="M24 14 H28 V22 H24Z" fill="white"/><path d="M10 2 V8 M15 2 V8 M20 2 V8" stroke="%23A0522D" stroke-width="2"/></svg>');
+}
+/* 기타 (기본 몬스터) */
+.icon-other {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23d68a9f"/><rect x="12" y="4" width="8" height="4" fill="%23d68a9f"/><rect x="10" y="8" width="12" height="4" fill="%23d68a9f"/><rect x="8" y="12" width="16" height="12" fill="%23d68a9f"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>'); 
+}
 
 
 .hq-marker-icon { 
