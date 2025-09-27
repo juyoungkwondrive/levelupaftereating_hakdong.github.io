@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
             popupAnchor: [0, -40]
         });
 
-        L.marker([HQ_LAT, LNG], { icon: hqIcon }).addTo(map)
+        // ✅✅✅ 수정된 부분: LNG -> HQ_LNG로 변경 ✅✅✅
+        L.marker([HQ_LAT, HQ_LNG], { icon: hqIcon }).addTo(map)
             .bindPopup('<b>HQ 🛡️ 학동 본부</b><br>출정 준비 완료!');
     }
     
@@ -162,17 +163,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 7. 랜덤 뽑기 기능
     // ==============================================
     drawBtn.addEventListener('click', () => {
-        // ✅ 선택된 타입과 정렬 옵션 가져오기
         const selectedType = document.getElementById('type-option').value;
         const sortOption = document.querySelector('input[name="sort-option"]:checked').value;
         
-        // ✅ 타입에 따라 레스토랑 목록 필터링
         let filteredList = allRestaurants;
         if (selectedType !== 'all') {
             filteredList = allRestaurants.filter(r => r.type === selectedType);
         }
 
-        // ✅ 필터링된 목록을 복사하여 정렬
         let sortedList = [...filteredList];
         
         if (sortOption === 'rating') {
@@ -181,7 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
             sortedList.sort((a, b) => a.distanceMinutes - b.distanceMinutes);
         }
         
-        // 필터링 및 정렬된 목록을 랜덤으로 섞기
         for (let i = sortedList.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [sortedList[i], sortedList[j]] = [sortedList[j], sortedList[i]];
