@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>밥 먹고 레벨업! 학동 맛집</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="splash-screen" class="screen active">
+        <div class="splash-content">
+            <h1>밥 먹고 레벨업! 학동 맛집!</h1>
+            <h2>점심 퀘스트를 시작하라!</h2>
+            <p class="quest-msg">용사여, 숟가락 무기 들고 던전으로 떠나 전리품을 획득하라!</p>
+            <!-- ✅ <p> 태그를 <button>으로 변경하고 id와 class를 추가했습니다 -->
+            <button id="start-btn" class="pixel-btn large touch-to-start">출정 준비!</button>
+        </div>
+    </section>
+
+    <section id="map-screen" class="screen">
+        <div class="container">
+            <header>
+                <h1>학동 맛집</h1>
+                <h2>(던전 탐색 준비 완료!)</h2>
+            </header>
+            <main>
+                <div id="map"></div>
+            </main>
+            <footer>
+                <button id="go-to-bestiary-btn" class="pixel-btn">📖 몬스터 도감</button> 
+                <button id="go-to-randomizer-btn" class="pixel-btn">🎲 오늘 점심 보스 몬스터 찾기!</button>
+            </footer>
+        </div>
+    </section>
+
+    <section id="bestiary-screen" class="screen">
+        <div class="container">
+            <header>
+                <h1>📖 몬스터 도감</h1>
+                <h2>(학동 던전 출몰 몬스터 리스트)</h2>
+            </header>
+            <div id="bestiary-list" class="bestiary-grid">
+                <!-- 몬스터 도감 리스트가 여기에 표시됩니다. -->
+            </div>
+            <footer>
+                <button id="back-to-map-from-bestiary-btn" class="pixel-btn">🗺️ 본부로 복귀</button>
+            </footer>
+        </div>
+    </section>
+
+    <section id="randomizer-screen" class="screen">
+        <div class="container">
+            <header>
+                <h1>🎲 오늘의 보스 몬스터 찾기!</h1>
+            </header>
+            <div class="randomizer-content">
+                <div class="options">
+                    <h2>정렬 기준 선택:</h2>
+                    <label>
+                        <input type="radio" name="sort-option" value="rating" checked> ⭐ 최고 EXP 획득 순
+                    </label>
+                    <label>
+                        <input type="radio" name="sort-option" value="distance"> 👟 최단 거리 이동 순
+                    </label>
+                </div>
+                <button id="draw-btn" class="pixel-btn large">✨ 전리품 획득! (뽑기 시작!) ✨</button>
+                
+                <div id="random-results">
+                    <!-- 랜덤 결과가 여기에 표시됩니다. -->
+                </div>
+            </div>
+            <footer>
+                <button id="back-to-map-from-randomizer-btn" class="pixel-btn">🗺️ 본부로 복귀</button>
+            </footer>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
