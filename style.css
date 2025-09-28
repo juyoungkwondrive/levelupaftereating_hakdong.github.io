@@ -1,6 +1,7 @@
 /* ============================================== */
 /* 기본 스타일 초기화 및 설정                     */
 /* ============================================== */
+/* 폰트를 '네오둥근모'로 변경 */
 @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/neodgm.woff2');
 
 body, h1, h2, h3, p, ul, li {
@@ -10,9 +11,9 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    /* 배경을 양피지 색상으로 변경 */
-    background-color: #fbf0d9; 
+    background-color: #92d4f8; 
     color: #3b2c24; 
+    /* font-family를 'neodgm'으로 변경 */
     font-family: 'neodgm', sans-serif;
     line-height: 1.6;
     font-size: 14px; 
@@ -52,19 +53,17 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #fbf0d9; 
-    /* 패턴 색상을 옅은 틸(teal) 색으로 변경 */
+    background-color: #92d4f8; 
     background-image:
-        linear-gradient(45deg, #78a8a8 25%, transparent 25%),
-        linear-gradient(-45deg, #78a8a8 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #78a8a8 75%),
-        linear-gradient(-45deg, transparent 75%, #78a8a8 75%);
+        linear-gradient(45deg, #aed68a 25%, transparent 25%),
+        linear-gradient(-45deg, #aed68a 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #aed68a 75%),
+        linear-gradient(-45deg, transparent 75%, #aed68a 75%);
     background-size: 40px 40px; 
     background-position: 0 0, 0 20px, 20px 20px, 20px 0;
 }
 .splash-content {
-    /* 배경을 더 어두운 양피지 색으로 변경 */
-    background-color: #f5eeda;
+    background-color: #e5b0c4; 
     padding: 30px 40px;
     border: 4px solid #7d4d42; 
     box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5); 
@@ -72,15 +71,13 @@ body {
 }
 .splash-content h1 {
     font-size: 3.5em; 
-    /* 헤더 색상을 빛바랜 붉은색으로 변경 */
-    color: #c06c6c; 
+    color: #f7e09e; 
     text-shadow: 4px 4px 0px #7d4d42; 
     margin-bottom: 10px;
 }
 .splash-content h2 {
     font-size: 1.5em;
-    /* 서브헤더 색상을 금색으로 변경 */
-    color: #daa520; 
+    color: #aed68a; 
     text-shadow: 2px 2px 0px #7d4d42;
     margin-bottom: 20px;
 }
@@ -108,8 +105,7 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    /* 컨테이너 배경색 변경 */
-    background-color: #f5eeda;
+    background-color: #b8e2f8; 
     border: 4px solid #7d4d42; 
     box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5); 
     border-radius: 4px;
@@ -126,15 +122,13 @@ header {
 }
 header h1 {
     font-size: 2.2em;
-    /* 헤더 색상 변경 */
-    color: #c06c6c;
+    color: #e5b0c4; 
     text-shadow: 3px 3px 0px #7d4d42; 
     letter-spacing: 2px;
 }
 header h2 { 
     font-size: 1.2em;
-    /* 서브헤더 색상 변경 */
-    color: #daa520;
+    color: #aed68a; 
     text-shadow: 2px 2px 0px #7d4d42;
     margin-top: 5px;
 }
@@ -153,8 +147,7 @@ main {
     height: 100%;
     border: 3px solid #7d4d42;
     box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.3);
-    /* 지도 로딩 전 배경색 변경 */
-    background-color: #e3d8c4;
+    background-color: #c9e9fd; 
     border-radius: 2px;
 }
 
@@ -170,8 +163,7 @@ main {
     overflow-y: auto;
     padding: 10px;
     border: 2px solid #7d4d42;
-    /* 배경색 변경 */
-    background-color: #fbf0d9;
+    background-color: #b8e2f8; 
     border-radius: 2px;
     flex-grow: 1;
 }
@@ -202,8 +194,7 @@ main {
 
 .bestiary-card h3 {
     font-size: 1.2em;
-    /* 헤더 색상 변경 */
-    color: #c06c6c;
+    color: #e5b0c4; 
     text-shadow: 2px 2px 0px #7d4d42;
     margin-bottom: 8px;
 }
@@ -220,18 +211,16 @@ main {
 }
 
 .bestiary-card .stats span {
-    /* 태그 배경색 변경 */
-    background-color: #78a8a8;
+    background-color: #aed68a; 
     padding: 4px 8px;
     border: 1px solid #7d4d42;
     border-radius: 1px;
     white-space: nowrap;
-    color: #fbf0d9;
-    text-shadow: 1px 1px 0px #3b2c24;
+    color: #3b2c24; 
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
 }
 .bestiary-card .stats .type {
-    /* 타입 태그 배경색 변경 */
-    background-color: #daa520;
+    background-color: #f7e09e;
 }
 
 
@@ -260,12 +249,12 @@ main {
 .options h2 {
     font-size: 1.2em;
     margin-bottom: 15px;
-    /* 헤더 색상 변경 */
-    color: #c06c6c;
+    color: #e5b0c4; 
     text-shadow: 2px 2px 0px #7d4d42;
 }
 
 .pixel-select {
+    /* font-family를 'neodgm'으로 변경 */
     font-family: 'neodgm', sans-serif;
     background-color: #f7f0e3;
     color: #3b2c24;
@@ -276,8 +265,7 @@ main {
     cursor: pointer;
 }
 .pixel-select:focus {
-    /* 포커스 색상 변경 */
-    outline: 2px solid #daa520;
+    outline: 2px solid #aed68a;
 }
 
 #random-results {
@@ -286,16 +274,14 @@ main {
     min-height: 200px;
     border: 2px dashed #7d4d42; 
     padding: 15px;
-    /* 배경색 변경 */
-    background-color: #fbf0d9;
+    background-color: #b8e2f8; 
     border-radius: 2px;
 }
 .result-item {
     font-size: 1.3em;
     margin-bottom: 12px;
     padding: 8px;
-    /* 테두리 색상 변경 */
-    border: 1px solid #78a8a8;
+    border: 1px solid #aed68a; 
     background-color: #f7f0e3; 
     display: flex;
     align-items: center;
@@ -309,8 +295,7 @@ main {
     text-shadow: 2px 2px 0px rgba(0,0,0,0.4);
 }
 .result-item .name {
-    /* 이름 색상 변경 */
-    color: #c06c6c;
+    color: #e5b0c4; 
     margin-right: 15px;
     text-shadow: 1px 1px 0px #7d4d42;
 }
@@ -337,33 +322,30 @@ footer {
 }
 
 .pixel-btn {
+    /* font-family를 'neodgm'으로 변경 */
     font-family: 'neodgm', sans-serif; 
-    /* 버튼 배경색 변경 */
-    background-color: #78a8a8;
-    /* 버튼 글자색 변경 */
-    color: #fbf0d9;
+    background-color: #aed68a; 
+    color: #3b2c24; 
     border: 2px solid #7d4d42; 
     border-bottom-width: 4px; 
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
     transition: all 0.1s ease-out;
-    text-shadow: 1px 1px 0px #3b2c24;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
     white-space: nowrap;
     border-radius: 2px;
 }
 .pixel-btn:hover {
-    /* 버튼 호버 배경색 변경 */
-    background-color: #daa520;
+    background-color: #c9e9fd; 
     transform: translateY(-2px);
     border-bottom-width: 6px;
-    color: #3b2c24; 
+    color: #7d4d42; 
 }
 .pixel-btn:active {
     transform: translateY(1px);
     border-bottom-width: 4px;
-    /* 버튼 클릭 배경색 변경 */
-    background-color: #5a8a8a;
+    background-color: #8dbd74; 
 }
 .pixel-btn.large {
     font-size: 1.5em;
@@ -374,11 +356,6 @@ footer {
 /* ============================================== */
 /* Leaflet 지도 관련 커스텀 스타일              */
 /* ============================================== */
-/* 지도 타일 채도 조정은 보물지도 테마와 잘 어울려 그대로 유지 */
-.leaflet-tile-pane {
-    filter: saturate(70%) brightness(105%);
-}
-
 .pixel-marker-icon, .hq-marker-icon {
     background-size: contain;
     filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4));
@@ -386,6 +363,7 @@ footer {
     border: none !important;
 }
 
+/* 아이콘 공통 스타일: 크기와 위치만 지정 */
 .pixel-marker-icon { 
     width: 32px !important;
     height: 32px !important;
@@ -393,27 +371,35 @@ footer {
     margin-top: -32px !important;
 }
 
+/* 타입별로 각각 다른 모양의 아이콘 지정 */
+/* 한식 (뚝배기) */
 .icon-korean { 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 18 H26 V28 H6Z" fill="%23A0522D"/><path d="M6 18 H4 V24 H6Z" fill="%23A0522D"/><path d="M26 18 H28 V24 H26Z" fill="%23A0522D"/><path d="M10 10 V16 M16 10 V16 M22 10 V16" stroke="%23c06c6c" stroke-width="2"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 18 H26 V28 H6Z" fill="%23A0522D"/><path d="M6 18 H4 V24 H6Z" fill="%23A0522D"/><path d="M26 18 H28 V24 H26Z" fill="%23A0522D"/><path d="M10 10 V16 M16 10 V16 M22 10 V16" stroke="%23FFC0CB" stroke-width="2"/></svg>');
 }
+/* 일식 (초밥) */
 .icon-japanese { 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="12" width="20" height="16" fill="white" /><rect x="6" y="12" width="20" height="4" fill="%23c06c6c" /><rect x="4" y="10" width="24" height="20" rx="2" fill="none" stroke="black" stroke-width="2"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="12" width="20" height="16" fill="white" /><rect x="6" y="12" width="20" height="4" fill="%23FF6347" /><rect x="4" y="10" width="24" height="20" rx="2" fill="none" stroke="black" stroke-width="2"/></svg>');
 }
+/* 중식 (만두) */
 .icon-chinese { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 26 C6 14 26 14 26 26 Z" fill="%23F5DEB3" stroke="%23DEB887" stroke-width="2"/></svg>');
 }
+/* 양식 (피자) */
 .icon-western { 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M4 4 L16 30 L28 4 Z" fill="%23daa520"/><circle cx="12" cy="14" r="3" fill="%23c06c6c"/><circle cx="20" cy="12" r="3" fill="%23c06c6c"/><circle cx="16" cy="20" r="3" fill="%23c06c6c"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M4 4 L16 30 L28 4 Z" fill="%23FFD700"/><circle cx="12" cy="14" r="3" fill="%23DC143C"/><circle cx="20" cy="12" r="3" fill="%23DC143C"/><circle cx="16" cy="20" r="3" fill="%23DC143C"/></svg>');
 }
+/* 카페 (커피잔) */
 .icon-cafe { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 10 H24 V26 A4 4 0 0 1 20 30 H10 A4 4 0 0 1 6 26Z" fill="white"/><path d="M24 14 H28 V22 H24Z" fill="white"/><path d="M10 2 V8 M15 2 V8 M20 2 V8" stroke="%23A0522D" stroke-width="2"/></svg>');
 }
+/* 기타 (기본 몬스터) */
 .icon-other {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23c06c6c"/><rect x="12" y="4" width="8" height="4" fill="%23c06c6c"/><rect x="10" y="8" width="12" height="4" fill="%23c06c6c"/><rect x="8" y="12" width="16" height="12" fill="%23c06c6c"/><rect x="10" y="24" width="12" height="4" fill="%23daa520"/><rect x="12" y="28" width="8" height="4" fill="%23daa520"/></svg>'); 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23d68a9f"/><rect x="12" y="4" width="8" height="4" fill="%23d68a9f"/><rect x="10" y="8" width="12" height="4" fill="%23d68a9f"/><rect x="8" y="12" width="16" height="12" fill="%23d68a9f"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>'); 
 }
 
+
 .hq-marker-icon { 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23daa520"/><rect x="12" y="4" width="8" height="4" fill="%23daa520"/><rect x="10" y="8" width="12" height="4" fill="%23daa520"/><rect x="8" y="12" width="16" height="4" fill="%23daa520"/><rect x="8" y="16" width="4" height="4" fill="%23daa520"/><rect x="20" y="16" width="4" height="4" fill="%23daa520"/><rect x="8" y="20" width="16" height="4" fill="%23daa520"/><rect x="10" y="24" width="12" height="4" fill="%23daa520"/><rect x="12" y="28" width="8" height="4" fill="%23daa520"/></svg>'); 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="14" y="0" width="4" height="4" fill="%23f7e09e"/><rect x="12" y="4" width="8" height="4" fill="%23f7e09e"/><rect x="10" y="8" width="12" height="4" fill="%23f7e09e"/><rect x="8" y="12" width="16" height="4" fill="%23f7e09e"/><rect x="8" y="16" width="4" height="4" fill="%23f7e09e"/><rect x="20" y="16" width="4" height="4" fill="%23f7e09e"/><rect x="8" y="20" width="16" height="4" fill="%23f7e09e"/><rect x="10" y="24" width="12" height="4" fill="%23f7e09e"/><rect x="12" y="28" width="8" height="4" fill="%23f7e09e"/></svg>'); 
     width: 40px !important;
     height: 40px !important;
     margin-left: -20px !important;
@@ -421,19 +407,25 @@ footer {
 }
 
 .leaflet-popup-content-wrapper { 
-    /* 팝업 배경색 변경 */
-    background: #f5eeda;
+    background: #e5b0c4; 
     color: #3b2c24; 
     border-radius: 0; 
     padding: 5px 10px;
     border: 2px solid #7d4d42; 
+    /* font-family를 'neodgm'으로 변경 */
     font-family: 'neodgm', sans-serif; 
     font-size: 11px;
     box-shadow: 4px 4px 0px rgba(0,0,0,0.5); 
 }
-.leaflet-popup-tip-container { display: none; }
-.leaflet-popup-content { margin: 0; }
-.leaflet-popup-close-button { display: none; }
+.leaflet-popup-tip-container {
+    display: none;
+}
+.leaflet-popup-content {
+    margin: 0;
+}
+.leaflet-popup-close-button {
+    display: none;
+}
 
 
 /* ============================================== */
@@ -477,7 +469,7 @@ footer {
 /* 몬스터 도감 상세 정보 모달 스타일              */
 /* ============================================== */
 .modal {
-    display: none; 
+    display: none; /* 기본적으로 숨김 */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -490,7 +482,7 @@ footer {
     justify-content: center;
 }
 .modal.active {
-    display: flex; 
+    display: flex; /* 활성화 시 flex로 표시 */
 }
 
 .modal-content {
@@ -519,14 +511,12 @@ footer {
 }
 .close-btn:hover,
 .close-btn:focus {
-    /* 호버 색상 변경 */
-    color: #c06c6c;
+    color: #e5b0c4;
 }
 
 #modal-body h3 {
     font-size: 2em;
-    /* 헤더 색상 변경 */
-    color: #c06c6c;
+    color: #e5b0c4;
     text-shadow: 3px 3px 0px #7d4d42;
     margin-bottom: 15px;
     border-bottom: 2px solid #7d4d42;
@@ -546,29 +536,25 @@ footer {
 
 .modal-info span {
     display: inline-block;
-    /* 정보 태그 배경색 변경 */
-    background-color: #78a8a8;
+    background-color: #aed68a;
     padding: 5px 10px;
     border: 1px solid #7d4d42;
     border-radius: 1px;
     margin-right: 8px;
     margin-bottom: 8px;
-    /* 정보 태그 글자색 변경 */
-    color: #fbf0d9;
-    text-shadow: 1px 1px 0px #3b2c24;
+    color: #3b2c24;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
 }
 
 .modal-menu h4, .modal-reviews h4 {
     font-size: 1.4em;
     color: #3b2c24;
-    /* 서브헤더 텍스트 그림자 색 변경 */
-    text-shadow: 2px 2px 0px #daa520;
+    text-shadow: 2px 2px 0px #aed68a;
     margin-bottom: 10px;
 }
 
 .modal-menu-item, .modal-review-item {
-    /* 메뉴/리뷰 배경색 변경 */
-    background-color: #fbf0d9;
+    background-color: #b8e2f8;
     border: 2px solid #7d4d42;
     padding: 10px;
     margin-bottom: 8px;
@@ -580,12 +566,28 @@ footer {
     justify-content: space-between;
 }
 
-.menu-name { font-weight: bold; }
-.menu-price { color: #7d4d42; }
-.modal-review-item { font-style: italic; }
+.menu-name {
+    font-weight: bold;
+}
 
+.menu-price {
+    color: #7d4d42;
+}
+
+.modal-review-item {
+    font-style: italic;
+}
+
+/* 모바일 반응형 모달 추가 */
 @media (max-width: 768px) {
-    .modal-content { width: 95%; padding: 15px; }
-    #modal-body h3 { font-size: 1.5em; }
-    .modal-menu h4, .modal-reviews h4 { font-size: 1.2em; }
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+    #modal-body h3 {
+        font-size: 1.5em;
+    }
+    .modal-menu h4, .modal-reviews h4 {
+        font-size: 1.2em;
+    }
 }
