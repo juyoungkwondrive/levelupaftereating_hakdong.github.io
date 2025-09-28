@@ -3,102 +3,122 @@
     "id": 1,
     "name": "용사의 국밥집",
     "type": "한식",
-    "distance": "도보 5분",
-    "distanceMinutes": 5,
+    "distance_desc": "도보 5분",
+    "crosswalks": 1,
     "rating": 5,
-    "menu": [
-      { "name": "스테미너 국밥", "price": "10,000 GOLD" },
-      { "name": "마나 순대국", "price": "9,000 GOLD" },
-      { "name": "힐링 수육", "price": "25,000 GOLD" }
-    ],
-    "photo": "images/food1.png",
     "cleanliness": 5,
     "lat": 37.5145,
-    "lng": 127.0325
+    "lng": 127.0325,
+    "menu": [
+      { "name": "스테미너 국밥", "price": "10000" },
+      { "name": "마나 순대국", "price": "9000" },
+      { "name": "힐링 수육", "price": "25000" }
+    ],
+    "photo": "images/food1.png",
+    "reviews": [
+      "용사: 국밥 한 그릇에 힘이 불끈 솟는다!",
+      "성기사: 든든해서 언데드 100마리는 더 잡겠다."
+    ]
   },
   {
     "id": 2,
     "name": "마법사의 파스타 공방",
     "type": "양식",
-    "distance": "도보 10분",
-    "distanceMinutes": 10,
+    "distance_desc": "도보 10분",
+    "crosswalks": 0,
     "rating": 4,
-    "menu": [
-      { "name": "화염 볼로네제", "price": "14,000 GOLD" },
-      { "name": "냉기 크림 파스타", "price": "15,000 GOLD" },
-      { "name": "텔레포트 피자", "price": "22,000 GOLD" }
-    ],
-    "photo": "images/food2.png",
     "cleanliness": 4,
     "lat": 37.5130,
-    "lng": 127.0300
+    "lng": 127.0300,
+    "menu": [
+      { "name": "화염 볼로네제", "price": "14000" },
+      { "name": "냉기 크림 파스타", "price": "15000" },
+      { "name": "텔레포트 피자", "price": "22000" }
+    ],
+    "photo": "images/food2.png",
+    "reviews": [
+      "마법사: 화염 마법이 담긴 맛. 마나 회복에 탁월하다.",
+      "연금술사: 재료의 조합이 신비롭군. 연구해볼 가치가 있어."
+    ]
   },
   {
     "id": 3,
     "name": "무림고수의 짬뽕비급",
     "type": "중식",
-    "distance": "도보 12분",
-    "distanceMinutes": 12,
+    "distance_desc": "도보 12분",
+    "crosswalks": 1,
     "rating": 4,
-    "menu": [
-      { "name": "내공 짜장면", "price": "8,000 GOLD" },
-      { "name": "화경 짬뽕", "price": "11,000 GOLD" },
-      { "name": "절대고수 탕수육", "price": "28,000 GOLD" }
-    ],
-    "photo": "images/food3.png",
     "cleanliness": 3,
     "lat": 37.5155,
-    "lng": 127.0340
+    "lng": 127.0340,
+    "menu": [
+      { "name": "내공 짜장면", "price": "8000" },
+      { "name": "화경 짬뽕", "price": "11000" },
+      { "name": "절대고수 탕수육", "price": "28000" }
+    ],
+    "photo": "images/food3.png",
+    "reviews": [
+      "무림인: 짬뽕 국물에서 심후한 내공이 느껴진다."
+    ]
   },
   {
     "id": 4,
     "name": "닌자의 초밥 은신처",
     "type": "일식",
-    "distance": "도보 8분",
-    "distanceMinutes": 8,
+    "distance_desc": "도보 8분",
+    "crosswalks": 0,
     "rating": 5,
-    "menu": [
-      { "name": "암살자의 모듬초밥", "price": "18,000 GOLD" },
-      { "name": "그림자 회덮밥", "price": "13,000 GOLD" },
-      { "name": "풍둔 우동", "price": "9,000 GOLD" }
-    ],
-    "photo": "images/food4.png",
     "cleanliness": 5,
     "lat": 37.5170,
-    "lng": 127.0310
+    "lng": 127.0310,
+    "menu": [
+      { "name": "암살자의 모듬초밥", "price": "18000" },
+      { "name": "그림자 회덮밥", "price": "13000" },
+      { "name": "풍둔 우동", "price": "9000" }
+    ],
+    "photo": "images/food4.png",
+    "reviews": [
+      "닌자: 눈 깜짝할 사이에 사라지는 맛. 은신술 수련에 도움이 된다.",
+      "도적: 신선함이 살아있어 민첩성이 올라가는 느낌!"
+    ]
   },
   {
     "id": 5,
     "name": "연금술사의 김치찌개",
     "type": "한식",
-    "distance": "도보 3분",
-    "distanceMinutes": 3,
+    "distance_desc": "도보 3분",
+    "crosswalks": 0,
     "rating": 4,
-    "menu": [
-      { "name": "현자의 돌 김치찌개", "price": "10,000 GOLD" },
-      { "name": "황금비율 계란말이", "price": "8,000 GOLD" },
-      { "name": "플로지스톤 제육볶음", "price": "15,000 GOLD" }
-    ],
-    "photo": "images/food5.png",
     "cleanliness": 4,
     "lat": 37.5160,
-    "lng": 127.0328
+    "lng": 127.0328,
+    "menu": [
+      { "name": "현자의 돌 김치찌개", "price": "10000" },
+      { "name": "황금비율 계란말이", "price": "8000" },
+      { "name": "플로지스톤 제육볶음", "price": "15000" }
+    ],
+    "photo": "images/food5.png",
+    "reviews": []
   },
   {
     "id": 6,
     "name": "엘프의 힐링포션 찻집",
     "type": "카페",
-    "distance": "도보 15분",
-    "distanceMinutes": 15,
+    "distance_desc": "도보 15분",
+    "crosswalks": 0,
     "rating": 5,
-    "menu": [
-      { "name": "만드라고라 허브티", "price": "7,000 GOLD" },
-      { "name": "마나 에이드", "price": "7,500 GOLD" },
-      { "name": "생명수 커피", "price": "6,000 GOLD" }
-    ],
-    "photo": "images/food6.png",
     "cleanliness": 5,
     "lat": 37.5185,
-    "lng": 127.0350
+    "lng": 127.0350,
+    "menu": [
+      { "name": "만드라고라 허브티", "price": "7000" },
+      { "name": "마나 에이드", "price": "7500" },
+      { "name": "생명수 커피", "price": "6000" }
+    ],
+    "photo": "images/food6.png",
+    "reviews": [
+      "엘프: 숲의 기운이 느껴지는 맛. 심신이 안정된다.",
+      "치유사: 이 허브티는 웬만한 하급 포션보다 낫군."
+    ]
   }
 ]

@@ -174,6 +174,7 @@ main {
     box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.3);
     transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
     border-radius: 2px;
+    cursor: pointer;
 }
 .bestiary-card:hover {
     transform: translate(-2px, -2px);
@@ -197,7 +198,7 @@ main {
 }
 
 .bestiary-card .stats {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: #3b2c24; 
     margin-top: 10px;
     display: flex;
@@ -209,16 +210,12 @@ main {
 
 .bestiary-card .stats span {
     background-color: #aed68a; 
-    padding: 3px 6px;
+    padding: 4px 8px;
     border: 1px solid #7d4d42;
     border-radius: 1px;
     white-space: nowrap;
     color: #3b2c24; 
     text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
-}
-.bestiary-card .stats .type, .bestiary-card .stats .exp, .bestiary-card .stats .time, .bestiary-card .stats .difficulty, .bestiary-card .stats .gold {
-    color: #7d4d42; 
-    font-weight: bold;
 }
 .bestiary-card .stats .type {
     background-color: #f7e09e;
@@ -253,26 +250,7 @@ main {
     color: #e5b0c4; 
     text-shadow: 2px 2px 0px #7d4d42;
 }
-.options label {
-    font-size: 1em;
-    margin: 0 15px;
-    cursor: pointer;
-    color: #3b2c24; 
-    text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
-}
-.options input[type="radio"] {
-    display: none;
-}
-.options input[type="radio"] + *::before {
-    content: '[ ]';
-    margin-right: 8px;
-    color: #aed68a; 
-    text-shadow: 1px 1px 0px #7d4d42;
-}
-.options input[type="radio"]:checked + *::before {
-    content: '[X]';
-    color: #e5b0c4; 
-}
+
 .pixel-select {
     font-family: 'Galmuri11', sans-serif;
     background-color: #f7f0e3;
@@ -450,7 +428,7 @@ footer {
 /* ============================================== */
 @media (max-width: 768px) {
     body { font-size: 12px; }
-    .container { margin: 0; padding: 10px; border: none; box-shadow: none; }
+    .container { margin: 0; padding: 10px; border: none; box-shadow: none; height: 100%; }
     header h1 { font-size: 1.8em; }
     header h2 { font-size: 1em; }
     main { flex-direction: column; height: auto; }
@@ -466,7 +444,7 @@ footer {
     .options label { display: block; margin: 10px 0; }
     .result-item { font-size: 1.1em; flex-wrap: wrap; }
     .result-item .exp-gold { font-size: 0.8em; margin-top: 5px; width: 100%; }
-    footer { flex-direction: column; gap: 10px; }
+    footer { flex-direction: column; gap: 10px; padding-top: 10px; margin-top: 10px;}
     .pixel-btn { width: 100%; }
 }
 
@@ -480,4 +458,131 @@ footer {
     .result-item { font-size: 1em; }
     .result-item .medal { font-size: 1.3em; }
     .result-item .exp-gold { font-size: 0.7em; }
+}
+
+/* ============================================== */
+/* 몬스터 도감 상세 정보 모달 스타일              */
+/* ============================================== */
+.modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+}
+.modal.active {
+    display: flex; /* 활성화 시 flex로 표시 */
+}
+
+.modal-content {
+    background-color: #f7f0e3;
+    margin: auto;
+    padding: 25px;
+    border: 4px solid #7d4d42;
+    box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5);
+    border-radius: 4px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-btn {
+    color: #7d4d42;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 2px 2px 0px rgba(255,255,255,0.3);
+}
+.close-btn:hover,
+.close-btn:focus {
+    color: #e5b0c4;
+}
+
+#modal-body h3 {
+    font-size: 2em;
+    color: #e5b0c4;
+    text-shadow: 3px 3px 0px #7d4d42;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #7d4d42;
+    padding-bottom: 10px;
+}
+#modal-body img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #7d4d42;
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+.modal-info, .modal-menu, .modal-reviews {
+    margin-bottom: 20px;
+}
+
+.modal-info span {
+    display: inline-block;
+    background-color: #aed68a;
+    padding: 5px 10px;
+    border: 1px solid #7d4d42;
+    border-radius: 1px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    color: #3b2c24;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
+}
+
+.modal-menu h4, .modal-reviews h4 {
+    font-size: 1.4em;
+    color: #3b2c24;
+    text-shadow: 2px 2px 0px #aed68a;
+    margin-bottom: 10px;
+}
+
+.modal-menu-item, .modal-review-item {
+    background-color: #b8e2f8;
+    border: 2px solid #7d4d42;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+}
+
+.modal-menu-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-name {
+    font-weight: bold;
+}
+
+.menu-price {
+    color: #7d4d42;
+}
+
+.modal-review-item {
+    font-style: italic;
+}
+
+/* 모바일 반응형 모달 추가 */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+    #modal-body h3 {
+        font-size: 1.5em;
+    }
+    .modal-menu h4, .modal-reviews h4 {
+        font-size: 1.2em;
+    }
 }
