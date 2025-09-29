@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('데이터 로딩 오류:', error));
 
     // ==============================================
-    // 4. 지도 마커 표시
+    // 4. 지도 마커 표시 (*** 여기가 수정되었습니다 ***)
     // ==============================================
     function displayMapMarkers(restaurants) {
         function getIconClassForType(type) {
@@ -101,6 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 case '중식': return 'icon-chinese';
                 case '양식': return 'icon-western';
                 case '카페': return 'icon-cafe';
+                // --- 새로운 아이콘 클래스 추가 ---
+                case '아시안': return 'icon-asian';
+                case '패스트푸드': return 'icon-fast-food';
+                case '분식': return 'icon-bunsik';
+                case '샐러드&샌드위치': return 'icon-salad-sandwich';
+                // ---------------------------------
                 default: return 'icon-other';
             }
         }
