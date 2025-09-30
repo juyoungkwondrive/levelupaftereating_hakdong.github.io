@@ -223,7 +223,7 @@ main {
 
 
 /* ============================================== */
-/* 화면 4: 랜덤 뽑기 화면 (randomizer-screen)     */
+/* 화면 4: 랜덤 뽑기 화면 (randomizer-screen) (*** 수정됨 ***) */
 /* ============================================== */
 .randomizer-content {
     text-align: center;
@@ -251,19 +251,35 @@ main {
     text-shadow: 2px 2px 0px #7d4d42;
 }
 
-.pixel-select {
+/* --- 타입 선택 버튼 스타일 (새로 추가) --- */
+.type-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.type-btn {
     font-family: 'Galmuri11', sans-serif;
     background-color: #f7f0e3;
-    color: #3b2c24;
-    border: 2px solid #7d4d42;
-    padding: 8px;
-    font-size: 1em;
-    border-radius: 2px;
+    color: #7d4d42;
+    border: 2px solid #aeb4b8;
+    padding: 8px 12px;
+    font-size: 0.9em;
     cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.1s ease-out;
 }
-.pixel-select:focus {
-    outline: 2px solid #aed68a;
+.type-btn:hover {
+    background-color: #e8e0d0;
+    border-color: #7d4d42;
 }
+.type-btn.active {
+    background-color: #f7e09e;
+    border-color: #7d4d42;
+    color: #3b2c24;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.2);
+}
+/* ------------------------------------ */
 
 #random-results {
     margin-top: 30px;
@@ -350,7 +366,7 @@ footer {
 
 
 /* ============================================== */
-/* Leaflet 지도 관련 커스텀 스타일 (아이콘 수정됨)   */
+/* Leaflet 지도 관련 커스텀 스타일                 */
 /* ============================================== */
 .pixel-marker-icon, .hq-marker-icon {
     background-size: contain;
@@ -359,7 +375,6 @@ footer {
     border: none !important;
 }
 
-/* 아이콘 공통 스타일: 크기와 위치만 지정 */
 .pixel-marker-icon { 
     width: 32px !important;
     height: 32px !important;
@@ -367,49 +382,37 @@ footer {
     margin-top: -32px !important;
 }
 
-/* 타입별로 각각 다른 모양의 아이콘 지정 */
-/* 한식 (보글보글 뚝배기) */
 .icon-korean { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 16 C6 12 10 10 16 10 C22 10 26 12 26 16 V28 H6Z" fill="%238B4513"/><path d="M4 18 H6 V24 H4Z" fill="%238B4513"/><path d="M26 18 H28 V24 H26Z" fill="%238B4513"/><circle cx="12" cy="17" r="2" fill="%23ffdb58"/><circle cx="20" cy="17" r="2" fill="%23ffdb58"/><path d="M10 8 C10 4 14 4 14 8 C14 4 18 4 18 8" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg>');
 }
-/* 일식 (통통한 연어초밥) */
 .icon-japanese { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 20 C6 26 10 28 16 28 C22 28 26 26 26 20Z" fill="white"/><path d="M4 12 C4 8 28 8 28 12 C28 18 24 22 16 22 C8 22 4 18 4 12Z" fill="%23ff8c69"/><path d="M8 14 H24 M8 17 H24" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>');
 }
-/* 중식 (따끈한 찐빵) */
 .icon-chinese { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M16 28 C8 28 4 22 4 16 C4 10 8 4 16 4 C24 4 28 10 28 16 C28 22 24 28 16 28Z" fill="%23FFF8DC" stroke="%23DEB887" stroke-width="2"/><path d="M14 12 H18 V10 H14Z M12 14 H20 V12 H12Z" fill="%23DEB887"/><path d="M14 2 V6 M18 2 V6" stroke="%23F0E68C" stroke-width="2" stroke-linecap="round"/></svg>');
 }
-/* 양식 (피자 한 조각) */
 .icon-western { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M4 28 L16 4 L28 28 Z" fill="%23F5DEB3"/><path d="M6 26 L16 8 L26 26 Z" fill="%23FFD700"/><path d="M7 24 L16 11 L25 24 Z" fill="%23DC143C"/><circle cx="12" cy="22" r="3" fill="%23CD5C5C"/><circle cx="20" cy="22" r="3" fill="%23CD5C5C"/><circle cx="16" cy="16" r="3" fill="%23CD5C5C"/></svg>');
 }
-/* 카페 (하트라떼 머그) */
 .icon-cafe { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 10 H22 V26 A6 6 0 0 1 16 30 H12 A6 6 0 0 1 6 26Z" fill="white"/><path d="M22 14 H26 A4 4 0 0 1 26 22 H22Z" fill="white"/><path d="M10 14 H20 V24 H10Z" fill="%236B4F3D"/><path d="M16 4 L18 6 L16 8 L14 6Z" fill="%23e5b0c4"/></svg>');
 }
-/* 기타 (물음표 박스) */
 .icon-other {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" fill="%23aed68a" stroke="%237D4D42" stroke-width="2.5"/><path d="M12 11 C12 9 14 8 16 8 C18 8 20 9 20 11 C20 13 18 14 16 16 V18" fill="none" stroke="%233b2c24" stroke-width="3" stroke-linecap="round"/><rect x="14" y="21" width="4" height="4" fill="%233b2c24"/></svg>'); 
 }
-/* 아시안 (밥그릇) */
 .icon-asian {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 18 H26 C26 26 22 28 16 28 C10 28 6 26 6 18Z" fill="%23F5DEB3" stroke="%23DEB887" stroke-width="2"/><path d="M10 10 L14 18 M22 10 L18 18" stroke="%23A0522D" stroke-width="2"/></svg>');
 }
-/* 패스트푸드 (햄버거) */
 .icon-fast-food { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="8" y="22" width="16" height="4" fill="%23D2B48C"/><rect x="8" y="18" width="16" height="4" fill="%238B4513"/><path d="M8 17 C8 12 24 12 24 17Z" fill="%23F5DEB3"/><circle cx="12" cy="14" r="1" fill="white"/><circle cx="16" cy="12" r="1" fill="white"/><circle cx="20" cy="14" r="1" fill="white"/></svg>');
 }
-/* 분식 (꼬치) */
 .icon-bunsik { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="6" y1="26" x2="26" y2="6" stroke="%23DEB887" stroke-width="3"/><circle cx="10" cy="22" r="4" fill="%23FF6347"/><circle cx="16" cy="16" r="4" fill="%23FFD700"/><circle cx="22" cy="10" r="4" fill="%239ACD32"/></svg>');
 }
-/* 샐러드&샌드위치 (샌드위치) */
 .icon-salad-sandwich { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M6 24 L26 24 L26 20 L6 20Z" fill="%23D2B48C" /><path d="M6 20 L26 20 L26 16 L6 16Z" fill="%239ACD32" /><path d="M6 16 L26 16 L26 12 L6 12Z" fill="%23FF6347" /><path d="M6 12 L26 12 L16 6 Z" fill="%23D2B48C" /></svg>');
 }
 
-/* 본부 아이콘 (빨간 깃발) */
 .hq-marker-icon { 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="2" width="4" height="28" fill="%23A0522D"/><path d="M10 4 H26 L22 10 L26 16 H10Z" fill="%23FF4136" stroke="%233b2c24" stroke-width="1.5"/></svg>'); 
     width: 40px !important;
@@ -480,7 +483,7 @@ footer {
 /* 몬스터 도감 상세 정보 모달 스타일              */
 /* ============================================== */
 .modal {
-    display: none; /* 기본적으로 숨김 */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -493,7 +496,7 @@ footer {
     justify-content: center;
 }
 .modal.active {
-    display: flex; /* 활성화 시 flex로 표시 */
+    display: flex;
 }
 
 .modal-content {

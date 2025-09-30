@@ -58,13 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==============================================
-    // 2. 지도 초기화
+    // 2. 지도 초기화 (*** 지도 색상 수정 ***)
     // ==============================================
     function initMap() {
         if (map) return;
         map = L.map('map').setView([HQ_LAT, HQ_LNG], DEFAULT_ZOOM);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         }).addTo(map);
 
         const hqIcon = L.divIcon({
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('데이터 로딩 오류:', error));
 
     // ==============================================
-    // 4. 지도 마커 표시 (*** 여기가 수정되었습니다 ***)
+    // 4. 지도 마커 표시
     // ==============================================
     function displayMapMarkers(restaurants) {
         function getIconClassForType(type) {
@@ -101,12 +101,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 case '중식': return 'icon-chinese';
                 case '양식': return 'icon-western';
                 case '카페': return 'icon-cafe';
-                // --- 새로운 아이콘 클래스 추가 ---
                 case '아시안': return 'icon-asian';
                 case '패스트푸드': return 'icon-fast-food';
                 case '분식': return 'icon-bunsik';
                 case '샐러드&샌드위치': return 'icon-salad-sandwich';
-                // ---------------------------------
                 default: return 'icon-other';
             }
         }
@@ -126,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==============================================
-    // 5. 몬스터 도감 리스트 및 모달 기능
+    // 5. 몬스터 도감 리스트 및 모달 기능 (*** crosswalks 제거 ***)
     // ==============================================
     const bestiaryList = document.getElementById('bestiary-list');
 
@@ -136,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.className = 'bestiary-card';
             
-            // 간소화된 카드 정보
             card.innerHTML = `
                 <img src="${restaurant.photo}" alt="${restaurant.name} 몬스터 이미지">
                 <h3>No.${restaurant.id} ${restaurant.name}</h3>
@@ -146,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
 
-            // 카드 클릭 시 모달창 열기
             card.addEventListener('click', () => showBestiaryDetail(restaurant));
             bestiaryList.appendChild(card);
         });
@@ -155,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function showBestiaryDetail(restaurant) {
         const modalBody = document.getElementById('modal-body');
 
-        // 난이도 아이콘 설정
         let difficultyIcon = '🔴 (어려움)';
         if (restaurant.cleanliness >= 4) {
             difficultyIcon = '🟢 (쉬움)';
@@ -163,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
             difficultyIcon = '🟡 (보통)';
         }
 
-        // 메뉴 HTML 생성
         const menuHtml = restaurant.menu.map(item => `
             <div class="modal-menu-item">
                 <span class="menu-name">${item.name}</span>
@@ -171,7 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
 
-        // 후기 HTML 생성 (후기가 있을 경우에만)
         const reviewsHtml = restaurant.reviews && restaurant.reviews.length > 0 
             ? `
                 <div class="modal-reviews">
@@ -190,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span>✨ 획득 EXP: +${restaurant.rating}</span>
                 <span>⏰ 퀘스트 시간: ${restaurant.distance_desc}</span>
                 <span>⚔️ 난이도: ${difficultyIcon}</span>
-                <span>🚶 횡단보도: ${restaurant.crosswalks}개</span>
             </div>
 
             <div class="modal-menu">
@@ -204,17 +196,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==============================================
-    // 6. 랜덤 뽑기 기능
+    // 6. 랜덤 뽑기 기능 (*** 다중 선택 로직으로 수정 ***)
     // ==============================================
+    const typeBtnContainer = document.getElementById('type-btn-group');
+    const typeButtons = typeBtnContainer.querySelectorAll('.type-btn');
+    const resultsContainer = document.getElementById('random-results');
+
+    typeBtnContainer.addEventListener('click', (e) => {
+        if (!e.target.matches('.type-btn')) return;
+
+        const clickedBtn = e.target;
+        const isAllBtn = clickedBtn.dataset.type === 'all';
+        const allBtn = typeBtnContainer.querySelector('[data-type="all"]');
+        const otherButtons = Array.from(typeButtons).filter(btn => btn.dataset.type !== 'all');
+
+        if (isAllBtn) {
+            const isNowActive = !allBtn.classList.contains('active');
+            allBtn.classList.toggle('active', isNowActive);
+            otherButtons.forEach(btn => btn.classList.toggle('active', isNowActive));
+        } else {
+            clickedBtn.classList.toggle('active');
+            const allOthersActive = otherButtons.every(btn => btn.classList.contains('active'));
+            allBtn.classList.toggle('active', allOthersActive);
+        }
+    });
+
     drawBtn.addEventListener('click', () => {
-        const selectedType = document.getElementById('type-option').value;
-        
-        let filteredList = allRestaurants;
-        if (selectedType !== 'all') {
-            filteredList = allRestaurants.filter(r => r.type === selectedType);
+        const selectedTypes = Array.from(typeButtons)
+            .filter(btn => btn.classList.contains('active') && btn.dataset.type !== 'all')
+            .map(btn => btn.dataset.type);
+
+        let filteredList = [];
+        if (selectedTypes.length > 0) {
+            filteredList = allRestaurants.filter(r => selectedTypes.includes(r.type));
         }
 
-        // 정렬 로직 삭제, 바로 섞기
         let shuffledList = [...filteredList];
         for (let i = shuffledList.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -223,7 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const top3 = shuffledList.slice(0, 3);
         
-        const resultsContainer = document.getElementById('random-results');
         resultsContainer.innerHTML = '';
         
         if (top3.length > 0) {
@@ -246,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultsContainer.appendChild(resultItem);
             });
         } else {
-            resultsContainer.innerHTML = '<p class="exp-gold">퀘스트 실패! 해당 타입의 몬스터가 없습니다.</p>';
+            resultsContainer.innerHTML = '<p class="exp-gold">퀘스트 실패! 해당 타입의 몬스터가 없거나 타입을 선택하지 않았습니다.</p>';
         }
     });
 
@@ -267,18 +282,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener('touchend', e => {
         touchEndX = e.changedTouches[0].screenX;
         touchEndY = e.changedTouches[0].screenY;
-        handleSwipe(e); // event 객체 전달
+        handleSwipe(e);
     });
 
     function handleSwipe(event) {
         const activeScreen = document.querySelector('.screen.active');
         if (!activeScreen || activeScreen.id === 'splash-screen') return;
 
-        // 모달이 열려있을 때는 스와이프 방지
         if (bestiaryModal.classList.contains('active')) return;
 
         const target = event.target;
-        // 지도 위에서의 스와이프는 무시
         if (target.closest('#map')) return;
 
         const deltaX = touchEndX - touchStartX;
@@ -292,9 +305,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentIndex === -1) return;
 
         let nextIndex;
-        if (deltaX < 0) { // 왼쪽으로 스와이프
+        if (deltaX < 0) {
             nextIndex = (currentIndex + 1) % swipeScreens.length;
-        } else { // 오른쪽으로 스와이프
+        } else {
             nextIndex = (currentIndex - 1 + swipeScreens.length) % swipeScreens.length;
         }
         
