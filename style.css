@@ -1,7 +1,7 @@
 /* ============================================== */
-/* 기본 스타일 초기화 및 설정 (보물찾기 테마)     */
+/* 기본 스타일 초기화 및 설정 (픽셀아트 테마)     */
 /* ============================================== */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body, h1, h2, h3, p, ul, li {
     margin: 0;
@@ -10,13 +10,16 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    background-color: #d2b48c; /* 황토색 배경 */
-    color: #4a2c2a; /* 진한 갈색 텍스트 */
-    font-family: 'Cinzel', serif; /* 테마에 맞는 세리프 글꼴 */
-    line-height: 1.6;
-    font-size: 16px; 
+    background-color: #5d9bff; /* 하늘색 배경 */
+    color: #333333; /* 어두운 회색 텍스트 */
+    font-family: 'Press Start 2P', cursive; /* 픽셀아트 글꼴 */
+    line-height: 1.5;
+    font-size: 14px; 
     overflow: hidden;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><g fill="%23000" fill-opacity="0.05"><rect x="50" width="50" height="50"/><rect y="50" width="50" height="50"/></g></svg>');
+    background-image: 
+        linear-gradient(to bottom, #7fc1ff 50%, #5d9bff 50%),
+        linear-gradient(to right, #7fc1ff 50%, #5d9bff 50%);
+    background-size: 20px 20px;
 }
 
 /* ============================================== */
@@ -30,8 +33,8 @@ body {
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s;
-    padding: 20px; 
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    padding: 10px; 
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -49,80 +52,86 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="%235d9bff"/><rect x="0" y="70" width="100" height="30" fill="%237db848"/><rect x="0" y="85" width="100" height="15" fill="%23c08040"/><circle cx="80" cy="20" r="10" fill="%23ffffff"/><circle cx="20" cy="30" r="8" fill="%23ffffff"/></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: pixelated; /* 픽셀아트 렌더링 */
 }
 .splash-content {
-    background-color: rgba(245, 229, 195, 0.85); /* 반투명 양피지 */
-    padding: 40px 50px;
-    border: 2px solid #8a5a44;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4); 
-    border-radius: 10px;
-    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 */
+    padding: 20px 30px;
+    border: 3px solid #ffffff; /* 흰색 테두리 */
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.8); /* 픽셀 그림자 */
+    border-radius: 5px;
+    color: #ffffff;
+    image-rendering: pixelated;
 }
 .splash-content h1 {
-    font-size: 3.8em; 
-    color: #b94545; /* 포인트 레드 */
-    text-shadow: 2px 2px 2px #4a2c2a;
+    font-size: 2.5em; /* 폰트 크기 조정 */
+    color: #ffcc00; /* 금색 타이틀 */
+    text-shadow: 4px 4px 0px #ff0000; /* 빨간색 그림자 */
     margin-bottom: 10px;
 }
 .splash-content h2 {
-    font-size: 1.6em;
-    color: #8a5a44; 
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #cccccc; 
+    margin-bottom: 15px;
 }
 .quest-msg {
-    font-size: 1.2em;
-    color: #4a2c2a; 
-    margin-top: 20px;
-    margin-bottom: 25px;
+    font-size: 1em;
+    color: #eeeeee; 
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 .touch-to-start {
-    animation: glow 1.8s ease-in-out infinite alternate;
-    margin-top: 30px;
+    animation: blink-pixel 1s steps(1, end) infinite; /* 픽셀 깜빡임 */
+    font-size: 1.2em;
+    color: #00ff00; /* 녹색 */
+    text-shadow: 2px 2px 0px #009900;
+    margin-top: 20px;
 }
-@keyframes glow {
-    from {
-        box-shadow: 0 0 5px #c78c52, 0 0 10px #c78c52;
-    }
-    to {
-        box-shadow: 0 0 20px #c78c52, 0 0 30px #c78c52;
-    }
+@keyframes blink-pixel {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 
 /* ============================================== */
-/* 공통 컨테이너 (오래된 지도 디자인)              */
+/* 공통 컨테이너 (픽셀아트 박스 디자인)              */
 /* ============================================== */
 .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 30px;
-    background-color: #f5e5c3; /* 양피지 색상 */
-    border: 3px solid #8a5a44;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5); 
-    border-radius: 15px; /* 부드러운 모서리 */
-    height: calc(100% - 40px);
+    max-width: 900px; /* 너비 줄임 */
+    margin: 10px auto;
+    padding: 15px;
+    background-color: #333333; /* 어두운 배경 */
+    border: 3px solid #ffffff;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.8); 
+    border-radius: 5px;
+    height: calc(100% - 20px);
     display: flex;
     flex-direction: column;
     position: relative;
-    background-image: linear-gradient(rgba(210, 180, 140, 0.1) .1em, transparent .1em), linear-gradient(90deg, rgba(210, 180, 140, 0.1) .1em, transparent .1em);
-    background-size: 2em 2em;
+    image-rendering: pixelated;
+    overflow: hidden; /* 스크롤바가 픽셀아트 배경을 침범하지 않도록 */
 }
 
 header {
     text-align: center;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid rgba(138, 90, 68, 0.5);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #555555;
+    color: #eeeeee;
 }
 header h1 {
-    font-size: 2.5em;
-    color: #b94545;
-    text-shadow: 1px 1px 1px #4a2c2a; 
+    font-size: 1.8em;
+    color: #ffcc00;
+    text-shadow: 2px 2px 0px #ff0000; 
+    margin-bottom: 5px;
 }
 header h2 { 
-    font-size: 1.3em;
-    color: #8a5a44;
-    margin-top: 5px;
+    font-size: 1em;
+    color: #cccccc;
 }
 
 
@@ -137,9 +146,11 @@ main {
 #map {
     width: 100%; 
     height: 100%;
-    border: 2px solid #a88d6c;
-    box-shadow: inset 0 0 15px rgba(0,0,0,0.25);
-    border-radius: 10px;
+    border: 2px solid #555555;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.5);
+    border-radius: 3px;
+    background-color: #8c8c8c; /* 지도 기본 색상 */
+    image-rendering: pixelated;
 }
 
 /* ============================================== */
@@ -147,61 +158,69 @@ main {
 /* ============================================== */
 #bestiary-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 카드 크기 줄임 */
+    gap: 15px; /* 간격 줄임 */
+    margin-top: 15px;
     height: 100%;
     overflow-y: auto;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 3px;
     flex-grow: 1;
+    background-color: #222222; /* 어두운 배경 */
+    border: 2px solid #555555;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.5);
+    image-rendering: pixelated;
 }
 
 .bestiary-card {
-    background-color: #eaddc0;
-    border: 1px solid #c7a785;
-    padding: 15px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border-radius: 8px;
+    background-color: #4a4a4a; /* 카드 배경 */
+    border: 2px solid #777777;
+    padding: 10px;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    border-radius: 3px;
     cursor: pointer;
+    color: #eeeeee;
+    image-rendering: pixelated;
 }
 .bestiary-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 8px 8px 15px rgba(0,0,0,0.3);
+    transform: translate(-2px, -2px); /* 픽셀 이동 효과 */
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.6);
 }
 
 .bestiary-card img {
     width: 100%;
-    height: 150px;
+    height: 100px; /* 이미지 높이 줄임 */
     object-fit: cover;
-    border: 1px solid #c7a785;
-    margin-bottom: 12px;
-    border-radius: 5px;
+    border: 1px solid #777777;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    image-rendering: pixelated;
 }
 
 .bestiary-card h3 {
-    font-size: 1.4em;
-    color: #4a2c2a;
-    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #ffcc00;
+    margin-bottom: 5px;
 }
 
 .bestiary-card .stats {
-    font-size: 0.9em;
-    color: #4a2c2a; 
-    margin-top: 10px;
+    font-size: 0.8em;
+    color: #cccccc; 
+    margin-top: 8px;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    border-top: 1px dashed #c7a785;
-    padding-top: 10px;
+    gap: 5px;
+    border-top: 1px dashed #777777;
+    padding-top: 8px;
 }
 
 .bestiary-card .stats span {
-    background-color: rgba(255,255,255,0.4);
-    padding: 5px 10px;
-    border: 1px solid #c7a785;
-    border-radius: 5px;
+    background-color: #666666;
+    padding: 3px 6px;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
 }
 
 /* ============================================== */
@@ -209,197 +228,211 @@ main {
 /* ============================================== */
 .randomizer-content {
     text-align: center;
-    padding: 25px;
-    background-color: rgba(234, 221, 192, 0.7);
-    border: 1px solid #c7a785;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 10px;
+    padding: 15px;
+    background-color: #4a4a4a;
+    border: 2px solid #777777;
+    margin-top: 15px;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    color: #eeeeee;
+    image-rendering: pixelated;
 }
 .options {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .option-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .options h2 {
-    font-size: 1.4em;
-    margin-bottom: 20px;
-    color: #8a5a44; 
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #ffcc00; 
+    text-shadow: 1px 1px 0px #ff0000;
 }
 .type-btn-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 8px;
     justify-content: center;
 }
 .type-btn {
-    font-family: 'Cinzel', serif;
-    background-color: #f5e5c3;
-    color: #8a5a44;
-    border: 2px solid #c7a785;
-    padding: 10px 15px;
-    font-size: 1em;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #888888;
+    color: #333333;
+    border: 2px solid #cccccc;
+    padding: 8px 12px;
+    font-size: 0.9em;
     cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.2s ease;
+    border-radius: 3px;
+    transition: all 0.1s ease;
     font-weight: bold;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    image-rendering: pixelated;
 }
 .type-btn:hover {
-    background-color: #eaddc0;
-    border-color: #8a5a44;
+    background-color: #cccccc;
+    border-color: #ffffff;
+    color: #000000;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.6);
 }
 .type-btn.active {
-    background-color: #8a5a44;
-    border-color: #4a2c2a;
-    color: #f5e5c3;
-    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+    background-color: #00ff00; /* 활성화 색상 */
+    border-color: #00cc00;
+    color: #000000;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.5);
 }
 
 #random-results {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: left;
-    min-height: 200px;
-    border: 2px dashed #c7a785; 
-    padding: 20px;
-    background-color: rgba(255,255,255,0.3); 
-    border-radius: 10px;
+    min-height: 150px; /* 높이 줄임 */
+    border: 2px dashed #00ff00; /* 녹색 점선 */
+    padding: 15px;
+    background-color: #222222; 
+    border-radius: 5px;
+    color: #eeeeee;
+    image-rendering: pixelated;
 }
 .result-item {
-    font-size: 1.3em;
-    margin-bottom: 15px;
-    padding: 12px;
-    border: 1px solid #c78c52; 
-    background-color: #f5e5c3; 
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #777777; 
+    background-color: #444444; 
     display: flex;
     align-items: center;
-    box-shadow: 3px 3px 7px rgba(0,0,0,0.15);
-    border-radius: 5px;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+    border-radius: 3px;
 }
 .result-item .medal {
-    font-size: 1.5em;
-    margin-right: 15px;
-    color: #c78c52;
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #ffcc00; /* 금색 */
 }
 .result-item .name {
-    color: #4a2c2a; 
-    margin-right: 15px;
+    color: #00ff00; /* 녹색 */
+    margin-right: 10px;
     font-weight: bold;
 }
 .result-item .exp-gold {
-    font-size: 0.9em;
-    color: #8a5a44; 
+    font-size: 0.8em;
+    color: #cccccc; 
     white-space: nowrap;
 }
 
 
 /* ============================================== */
-/* 공통 버튼 스타일 (보물찾기 테마)                   */
+/* 공통 버튼 스타일 (픽셀아트)                   */
 /* ============================================== */
 footer {
     text-align: center;
-    padding-top: 20px;
-    border-top: 2px solid rgba(138, 90, 68, 0.5); 
-    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #555555; 
+    margin-top: 15px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 .pixel-btn { /* 클래스명은 유지하되, 스타일은 변경 */
-    font-family: 'Cinzel', serif;
-    background-color: #c78c52; /* 골드 색상 */
-    color: #4a2c2a; 
-    border: 2px solid #8a5a44;
-    padding: 12px 25px;
-    font-size: 1.1em;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #0099ff; /* 파란색 */
+    color: #ffffff; 
+    border: 2px solid #0055ff;
+    padding: 10px 20px;
+    font-size: 0.9em;
     cursor: pointer;
-    transition: all 0.2s ease-out;
-    border-radius: 8px;
+    transition: all 0.1s ease-out;
+    border-radius: 3px;
     font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.6);
     text-transform: uppercase;
+    image-rendering: pixelated;
 }
 .pixel-btn:hover {
-    background-color: #eaddc0;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+    background-color: #0055ff;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.7);
 }
 .pixel-btn:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
 }
 .pixel-btn.large {
-    font-size: 1.6em;
-    padding: 18px 35px;
+    font-size: 1.4em;
+    padding: 15px 30px;
 }
 
 
 /* ============================================== */
-/* Leaflet 지도 관련 커스텀 스타일 (아이콘 수정)   */
+/* Leaflet 지도 관련 커스텀 스타일 (픽셀아트 아이콘)   */
 /* ============================================== */
 .pixel-marker-icon, .hq-marker-icon {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.5));
+    filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.7));
     border: none !important;
     background-color: transparent !important;
+    image-rendering: pixelated; /* 픽셀아트 렌더링 */
 }
 .pixel-marker-icon { 
-    width: 40px !important; height: 40px !important;
-    margin-left: -20px !important; margin-top: -40px !important;
+    width: 32px !important; height: 32px !important; /* 크기 줄임 */
+    margin-left: -16px !important; margin-top: -32px !important;
 }
 
-/* HQ 아이콘: X 표시 */
+/* HQ 아이콘: X 표시 (픽셀아트 스타일) */
 .hq-marker-icon { 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M10 10 L30 30 M30 10 L10 30" stroke="%23b94545" stroke-width="6" stroke-linecap="round"/></svg>'); 
-    width: 40px !important; height: 40px !important;
-    margin-left: -20px !important; margin-top: -40px !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><path d="M6 6 L26 26 M26 6 L6 26" stroke="%23ff0000" stroke-width="4" stroke-linecap="butt" shape-rendering="crispEdges"/></svg>'); 
+    width: 32px !important; height: 32px !important;
+    margin-left: -16px !important; margin-top: -32px !important;
 }
 
-/* --- 타입별 아이콘: 보물찾기 테마 (수정됨) --- */
-.icon-korean { /* 옛날 동전 */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="%23c78c52" stroke="%238a5a44" stroke-width="3"/><rect x="17" y="17" width="6" height="6" fill="%23f5e5c3"/></svg>');
+/* 타입별 아이콘: 픽셀아트 보물찾기 테마 */
+.icon-korean { /* 옛날 동전 (골드 코인) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><path d="M16 4 L28 16 L16 28 L4 16 Z" fill="%23ffcc00" stroke="%23cc9900" stroke-width="2" shape-rendering="crispEdges"/><rect x="14" y="14" width="4" height="4" fill="%23ff0000"/></svg>');
 }
-.icon-japanese { /* 칼 코등이 */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="14" fill="%23a9a9a9" stroke="%23696969" stroke-width="3"/><rect x="18" y="10" width="4" height="20" fill="%23f5e5c3"/><path d="M12 14 H28 M12 26 H28" fill="none" stroke="%23696969" stroke-width="2.5"/></svg>');
+.icon-japanese { /* 무기 조각 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><rect x="10" y="8" width="12" height="4" fill="%23aaaaaa" shape-rendering="crispEdges"/><rect x="12" y="12" width="8" height="12" fill="%23cccccc" shape-rendering="crispEdges"/><polygon points="10 24, 22 24, 16 28" fill="%23aaaaaa" stroke="%23888888" stroke-width="1" shape-rendering="crispEdges"/></svg>');
 }
-.icon-chinese { /* 옥 장신구 */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="%236B8E23" stroke="%23556B2F" stroke-width="3"/><circle cx="20" cy="20" r="6" fill="%23f5e5c3"/></svg>');
+.icon-chinese { /* 룬 문자 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><rect x="8" y="8" width="4" height="16" fill="%2300ff00" shape-rendering="crispEdges"/><rect x="12" y="8" width="12" height="4" fill="%2300ff00" shape-rendering="crispEdges"/><rect x="12" y="20" width="12" height="4" fill="%2300ff00" shape-rendering="crispEdges"/></svg>');
 }
-.icon-western { /* 깃털 펜 */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M10 30 Q 25 25, 30 10 C 20 20, 15 25, 10 30Z" fill="white" stroke="%234a2c2a" stroke-width="2"/><line x1="12" y1="28" x2="28" y2="12" stroke="%234a2c2a" stroke-width="1.5"/></svg>');
+.icon-western { /* 두루마리 지도 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><rect x="6" y="8" width="20" height="16" fill="%23ffddaa" stroke="%23aa7744" stroke-width="2" rx="2" ry="2" shape-rendering="crispEdges"/><rect x="4" y="10" width="2" height="12" fill="%23aa7744" shape-rendering="crispEdges"/><rect x="26" y="10" width="2" height="12" fill="%23aa7744" shape-rendering="crispEdges"/></svg>');
 }
-.icon-cafe { /* 오래된 열쇠 */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="12" r="8" fill="none" stroke="%23c78c52" stroke-width="4"/><rect x="18" y="18" width="4" height="18" fill="%23c78c52"/><rect x="12" y="32" width="16" height="4" fill="%23c78c52"/></svg>');
+.icon-cafe { /* 커피 잔 (보물처럼 빛나는) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><rect x="8" y="14" width="10" height="10" fill="%238b4513" shape-rendering="crispEdges"/><rect x="18" y="16" width="4" height="6" fill="%238b4513" shape-rendering="crispEdges"/><rect x="10" y="10" width="6" height="4" fill="%23e0c090" shape-rendering="crispEdges"/><circle cx="13" cy="11" r="1" fill="%23ffffff"/><polygon points="20 4, 22 8, 20 12, 18 8" fill="%23ffcc00" stroke="%23cc9900" stroke-width="1" shape-rendering="crispEdges"/></svg>');
 }
-.icon-asian { /* 코끼리상 */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M12 20 C 12 12, 20 10, 28 15 C 32 20, 30 30, 22 32 L 20 22 Z" fill="%23a9a9a9"/><path d="M12 20 C 8 22, 8 28, 12 30" fill="%23a9a9a9"/><circle cx="25" cy="18" r="2" fill="%234a2c2a"/></svg>');
+.icon-asian { /* 불상 조각 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><path d="M16 4 L24 12 L16 28 L8 12 Z" fill="%23ffcc00" stroke="%23cc9900" stroke-width="2" shape-rendering="crispEdges"/><circle cx="16" cy="10" r="3" fill="%23cc9900"/><rect x="14" y="20" width="4" height="4" fill="%23cc9900" shape-rendering="crispEdges"/></svg>');
 }
-.icon-fast-food { /* 해적 깃발 */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="16" r="6" fill="white"/><path d="M14 22 H26 V28 H14Z" fill="white"/><line x1="12" y1="32" x2="28" y2="16" stroke="white" stroke-width="3"/><line x1="12" y1="16" x2="28" y2="32" stroke="white" stroke-width="3"/></svg>');
+.icon-fast-food { /* 햄버거 (아이템화) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><rect x="8" y="16" width="16" height="4" fill="%238b4513" shape-rendering="crispEdges"/><rect x="6" y="12" width="20" height="4" fill="%23ffddaa" shape-rendering="crispEdges"/><rect x="10" y="8" width="12" height="4" fill="%23ffcc00" shape-rendering="crispEdges"/><circle cx="12" cy="9" r="1" fill="%2300ff00"/><circle cx="18" cy="9" r="1" fill="%23ff0000"/></svg>');
 }
-.icon-bunsik { /* 보석 */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M10 18 L20 32 L30 18 L20 8 Z" fill="%2392d4f8" stroke="%234a2c2a" stroke-width="2"/><path d="M10 18 L20 18 L20 8 M30 18 L20 18" stroke="%234a2c2a" stroke-width="1.5"/></svg>');
+.icon-bunsik { /* 주사위 (랜덤 요소) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><rect x="8" y="8" width="16" height="16" fill="%23ffffff" stroke="%23333333" stroke-width="2" rx="2" ry="2" shape-rendering="crispEdges"/><circle cx="12" cy="12" r="2" fill="%23ff0000"/><circle cx="20" cy="12" r="2" fill="%23ff0000"/><circle cx="16" cy="16" r="2" fill="%23ff0000"/><circle cx="12" cy="20" r="2" fill="%23ff0000"/><circle cx="20" cy="20" r="2" fill="%23ff0000"/></svg>');
 }
-.icon-salad-sandwich { /* 보물상자 */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><rect x="8" y="18" width="24" height="14" fill="%238a5a44"/><rect x="6" y="14" width="28" height="6" fill="%238a5a44"/><path d="M6 14 A14 14 0 0 1 34 14" fill="%238a5a44"/><rect x="18" y="22" width="4" height="6" fill="%23c78c52"/><line x1="6" y1="20" x2="34" y2="20" stroke="%23c78c52" stroke-width="2"/></svg>');
+.icon-salad-sandwich { /* 물약 병 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><rect x="12" y="6" width="8" height="4" fill="%23aaaaaa" shape-rendering="crispEdges"/><rect x="10" y="10" width="12" height="16" fill="%230099ff" stroke="%230055ff" stroke-width="2" rx="3" ry="3" shape-rendering="crispEdges"/><rect x="14" y="12" width="4" height="10" fill="%23ffffff"/></svg>');
 }
 .icon-other { /* 나침반 */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="%23f5e5c3" stroke="%238a5a44" stroke-width="3"/><path d="M20 8 L24 20 L20 24 L16 20 Z" fill="%23b94545"/><path d="M20 32 L16 20 L20 24 L24 20 Z" fill="%234a2c2a"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="none"/><circle cx="16" cy="16" r="12" fill="%23ffffff" stroke="%23333333" stroke-width="2" shape-rendering="crispEdges"/><polygon points="16 8, 20 16, 16 24, 12 16" fill="%23ff0000" shape-rendering="crispEdges"/><rect x="14" y="14" width="4" height="4" fill="%23333333" shape-rendering="crispEdges"/></svg>');
 }
 
 .leaflet-popup-content-wrapper { 
-    background: #f5e5c3; 
-    color: #4a2c2a; 
-    border-radius: 5px; 
-    padding: 8px 12px;
-    border: 2px solid #8a5a44; 
-    font-family: 'Cinzel', serif; 
-    font-size: 13px;
-    box-shadow: 4px 4px 8px rgba(0,0,0,0.4); 
+    background: #333333; 
+    color: #ffffff; 
+    border-radius: 3px; 
+    padding: 6px 10px;
+    border: 2px solid #ffffff; 
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 10px;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.6); 
+    image-rendering: pixelated;
 }
 .leaflet-popup-tip-container { display: none; }
 .leaflet-popup-content { margin: 0; }
@@ -410,15 +443,27 @@ footer {
 /* 모바일 반응형 스타일                           */
 /* ============================================== */
 @media (max-width: 768px) {
-    body { font-size: 14px; }
-    .container { margin: 0; padding: 15px; border: none; box-shadow: none; height: 100%; border-radius: 0;}
-    header h1 { font-size: 2em; }
-    header h2 { font-size: 1.1em; }
-    #map { height: 50vh; margin-bottom: 15px; }
-    .splash-content h1 { font-size: 2.8em; }
-    #bestiary-list { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 10px; }
-    .pixel-btn { width: 100%; font-size: 1em; padding: 12px; }
+    body { font-size: 12px; }
+    .container { margin: 0; padding: 10px; border: none; box-shadow: none; height: 100%; border-radius: 0;}
+    header h1 { font-size: 1.5em; }
+    header h2 { font-size: 0.9em; }
+    #map { height: 45vh; margin-bottom: 10px; }
+    .splash-content h1 { font-size: 2em; }
+    .splash-content h2 { font-size: 1em; }
+    .bestiary-card { padding: 8px; }
+    .bestiary-card img { height: 80px; }
+    .bestiary-card h3 { font-size: 1em; }
+    .bestiary-card .stats { font-size: 0.7em; }
+    #bestiary-list { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); } /* 더 작은 화면 대응 */
+    footer { flex-direction: column; gap: 8px; }
+    .pixel-btn { width: 100%; font-size: 0.9em; padding: 10px; }
+    .pixel-btn.large { font-size: 1.2em; padding: 12px 20px; }
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+    #modal-body h3 { font-size: 1.8em; }
+    #modal-body img { height: 150px; }
 }
 
 /* ============================================== */
@@ -429,59 +474,66 @@ footer {
     position: fixed; z-index: 1000;
     left: 0; top: 0; width: 100%; height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     align-items: center; justify-content: center;
 }
 .modal.active { display: flex; }
 .modal-content {
-    background-color: #f5e5c3;
+    background-color: #333333;
     margin: auto;
-    padding: 30px;
-    border: 3px solid #8a5a44;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border-radius: 15px;
-    width: 90%; max-width: 600px;
+    padding: 20px;
+    border: 3px solid #ffffff;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.8);
+    border-radius: 5px;
+    width: 90%; max-width: 500px; /* 너비 조정 */
     position: relative;
-    max-height: 85vh;
+    max-height: 80vh;
     overflow-y: auto;
+    color: #eeeeee;
+    image-rendering: pixelated;
 }
 
 .close-btn {
-    color: #8a5a44;
-    position: absolute; top: 10px; right: 20px;
-    font-size: 38px; font-weight: bold; cursor: pointer;
+    color: #ff0000;
+    position: absolute; top: 8px; right: 15px;
+    font-size: 30px; font-weight: bold; cursor: pointer;
+    text-shadow: 2px 2px 0px #880000;
 }
-.close-btn:hover, .close-btn:focus { color: #b94545; }
+.close-btn:hover, .close-btn:focus { color: #ff5555; }
 
 #modal-body h3 {
-    font-size: 2.2em; color: #b94545;
-    margin-bottom: 15px; border-bottom: 2px solid rgba(138, 90, 68, 0.5);
-    padding-bottom: 10px;
+    font-size: 1.8em; color: #ffcc00;
+    margin-bottom: 10px; border-bottom: 2px solid #555555;
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 0px #ff0000;
 }
 #modal-body img {
-    width: 100%; height: 200px; object-fit: cover;
-    border: 2px solid #c7a785; margin-bottom: 20px; border-radius: 10px;
+    width: 100%; height: 150px; object-fit: cover;
+    border: 2px solid #777777; margin-bottom: 15px; border-radius: 5px;
+    image-rendering: pixelated;
 }
 .modal-info, .modal-menu, .modal-reviews {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 .modal-info span {
     display: inline-block;
-    background-color: #eaddc0;
-    padding: 8px 12px;
-    border: 1px solid #c7a785;
-    border-radius: 5px;
-    margin-right: 10px; margin-bottom: 10px;
+    background-color: #555555;
+    padding: 6px 10px;
+    border: 1px solid #777777;
+    border-radius: 3px;
+    margin-right: 8px; margin-bottom: 8px;
+    font-size: 0.9em;
 }
 .modal-menu h4, .modal-reviews h4 {
-    font-size: 1.5em; color: #8a5a44; margin-bottom: 15px;
+    font-size: 1.3em; color: #00ff00; margin-bottom: 10px;
+    text-shadow: 1px 1px 0px #009900;
 }
 .modal-menu-item, .modal-review-item {
-    background-color: rgba(255,255,255,0.4);
-    border: 1px solid #c7a785;
-    padding: 12px; margin-bottom: 10px; border-radius: 5px;
+    background-color: #444444;
+    border: 1px solid #777777;
+    padding: 10px; margin-bottom: 8px; border-radius: 3px;
 }
 .modal-menu-item { display: flex; justify-content: space-between; }
-.menu-name { font-weight: bold; }
-.menu-price { color: #4a2c2a; }
-.modal-review-item { font-style: italic; }
+.menu-name { font-weight: bold; color: #ffcc00; }
+.menu-price { color: #ffffff; }
+.modal-review-item { font-style: italic; color: #cccccc; }
