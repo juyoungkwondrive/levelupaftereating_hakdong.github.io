@@ -6,8 +6,8 @@
     "distance_desc": "도보 4분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5165,
-    "lng": 127.0345,
+    "lat": 37.515516,
+    "lng": 127.032738,
     "menu": [
       { "name": "수제비", "price": "9000" },
       { "name": "김치수제비", "price": "10000" },
@@ -23,8 +23,8 @@
     "distance_desc": "도보 3분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5152,
-    "lng": 127.0326,
+    "lat": 37.515806,
+    "lng": 127.032328,
     "menu": [
       { "name": "부대찌개", "price": "10000" },
       { "name": "부대전골", "price": "11000" }
@@ -39,8 +39,8 @@
     "distance_desc": "도보 4분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5165,
-    "lng": 127.0345,
+    "lat": 37.51559,
+    "lng": 127.03278,
     "menu": [
       { "name": "짜장면", "price": "9000" },
       { "name": "짬뽕", "price": "11000" },
@@ -56,8 +56,8 @@
     "distance_desc": "도보 5분",
     "rating": 3,
     "cleanliness": 3,
-    "lat": 37.5158,
-    "lng": 127.0353,
+    "lat": 37.514562,
+    "lng": 127.029449,
     "menu": [
       { "name": "짜장면", "price": "9000" },
       { "name": "간짜장", "price": "11000" },
@@ -73,8 +73,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.5173,
-    "lng": 127.0355,
+    "lat": 37.515997,
+    "lng": 127.030903,
     "menu": [
       { "name": "삼겹구이정식", "price": "12000" },
       { "name": "돼지불백정식", "price": "12000" },
@@ -90,8 +90,8 @@
     "distance_desc": "도보 2분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.517,
-    "lng": 127.0334,
+    "lat": 37.515184,
+    "lng": 127.033174,
     "menu": [],
     "photo": "images/food6.png",
     "reviews": ["간단하게 한 끼 해결하기 좋아요.", "음식이 빨리 나와서 좋습니다."]
@@ -103,8 +103,8 @@
     "distance_desc": "도보 1분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.5168,
-    "lng": 127.0329,
+    "lat": 37.515003,
+    "lng": 127.032663,
     "menu": [],
     "photo": "images/food7.png",
     "reviews": ["역시 치킨버거는 맘스터치!", "주문 즉시 만들어서 조금 기다려야 하지만 맛있어요."]
@@ -116,8 +116,8 @@
     "distance_desc": "도보 2분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.517,
-    "lng": 127.0334,
+    "lat": 37.515067,
+    "lng": 127.033054,
     "menu": [],
     "photo": "images/food8.png",
     "reviews": ["치킨이 바삭하고 맛있어요.", "비스켓은 꼭 드세요!"]
@@ -129,8 +129,8 @@
     "distance_desc": "도보 6분",
     "rating": 5,
     "cleanliness": 4,
-    "lat": 37.5137,
-    "lng": 127.0326,
+    "lat": 37.516648,
+    "lng": 127.030137,
     "menu": [
       { "name": "오또코노함박스테이크", "price": "12000" },
       { "name": "온나노함박스테이크", "price": "12000" },
@@ -146,8 +146,8 @@
     "distance_desc": "도보 5분",
     "rating": 5,
     "cleanliness": 4,
-    "lat": 37.5147,
-    "lng": 127.0305,
+    "lat": 37.514572,
+    "lng": 127.028908,
     "menu": [
       { "name": "직화닭갈비", "price": "(런치)10500" },
       { "name": "갈릭직화닭갈비", "price": "(런치)11000" },
@@ -163,8 +163,8 @@
     "distance_desc": "도보 6분",
     "rating": 3,
     "cleanliness": 3,
-    "lat": 37.5186,
-    "lng": 127.0363,
+    "lat": 37.516336,
+    "lng": 127.032536,
     "menu": [
       { "name": "반반치킨", "price": "19900" },
       { "name": "시장통닭", "price": "15000" }
@@ -179,8 +179,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.514,
-    "lng": 127.0324,
+    "lat": 37.515876,
+    "lng": 127.030592,
     "menu": [],
     "photo": "images/food12.png",
     "reviews": ["점심특선 가성비가 좋아요.", "반찬이 깔끔하고 맛있습니다."]
@@ -192,8 +192,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5141,
-    "lng": 127.0323,
+    "lat": 37.516004,
+    "lng": 127.030207,
     "menu": [
       { "name": "수육국밥", "price": "10000" },
       { "name": "순대국밥", "price": "10000" },
@@ -209,8 +209,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5155,
-    "lng": 127.035,
+    "lat": 37.514957,
+    "lng": 127.031059,
     "menu": [
       { "name": "칼국수보쌈정식", "price": "12000" },
       { "name": "칼국수제육정식", "price": "11000" }
@@ -225,8 +225,8 @@
     "distance_desc": "도보 3분",
     "rating": 3,
     "cleanliness": 4,
-    "lat": 37.5153,
-    "lng": 127.0333,
+    "lat": 37.516502,
+    "lng": 127.032292,
     "menu": [
       { "name": "아메리카노", "price": "3800" },
       { "name": "카페라떼", "price": "4500" },
@@ -242,8 +242,8 @@
     "distance_desc": "도보 8분",
     "rating": 5,
     "cleanliness": 3,
-    "lat": 37.5133,
-    "lng": 127.0289,
+    "lat": 37.515644,
+    "lng": 127.026849,
     "menu": [
       { "name": "닭다리살통곡물샐러드", "price": "10500" },
       { "name": "치폴레파스타샐러드", "price": "8500" },
@@ -259,8 +259,8 @@
     "distance_desc": "도보 9분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5139,
-    "lng": 127.0274,
+    "lat": 37.513802,
+    "lng": 127.029133,
     "menu": [
       { "name": "우삼겹메밀면누들", "price": "9300" },
       { "name": "칠리베이컨포케", "price": "8900" },
@@ -276,8 +276,8 @@
     "distance_desc": "도보 9분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.5139,
-    "lng": 127.0274,
+    "lat": 37.513876,
+    "lng": 127.029023,
     "menu": [
       { "name": "장조림버터비빔밥", "price": "12000" },
       { "name": "쇠고기야채죽", "price": "12000" },
@@ -293,8 +293,8 @@
     "distance_desc": "도보 4분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.5188,
-    "lng": 127.0315,
+    "lat": 37.518277,
+    "lng": 127.030331,
     "menu": [
       { "name": "퍼보", "price": "11000" },
       { "name": "분짜", "price": "15000" },
@@ -310,8 +310,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.5144,
-    "lng": 127.0341,
+    "lat": 37.516489,
+    "lng": 127.033629,
     "menu": [],
     "photo": "images/food20.png",
     "reviews": ["고기를 다 구워줘서 편하고 좋아요.", "명이나물이랑 같이 먹으면 꿀맛!"]
@@ -323,8 +323,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5144,
-    "lng": 127.0341,
+    "lat": 37.516557,
+    "lng": 127.03373,
     "menu": [
       { "name": "고등어구이", "price": "13000" },
       { "name": "삼치구이", "price": "12000" },
@@ -340,8 +340,8 @@
     "distance_desc": "도보 6분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.5137,
-    "lng": 127.031,
+    "lat": 37.514718,
+    "lng": 127.029568,
     "menu": [
       { "name": "로스카츠", "price": "12000" },
       { "name": "치즈카츠", "price": "14000" },
@@ -357,8 +357,8 @@
     "distance_desc": "도보 8분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5126,
-    "lng": 127.0301,
+    "lat": 37.514466,
+    "lng": 127.029688,
     "menu": [
       { "name": "우동정식", "price": "11000" },
       { "name": "모밀정식", "price": "11000" },
@@ -374,8 +374,8 @@
     "distance_desc": "도보 4분",
     "rating": 3,
     "cleanliness": 4,
-    "lat": 37.5147,
-    "lng": 127.032,
+    "lat": 37.515777,
+    "lng": 127.031616,
     "menu": [
       { "name": "아부라소바", "price": "11500" },
       { "name": "소유라멘", "price": "11000" },
@@ -391,8 +391,8 @@
     "distance_desc": "도보 7분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5136,
-    "lng": 127.0307,
+    "lat": 37.514795,
+    "lng": 127.028943,
     "menu": [
       { "name": "토가라시라멘", "price": "11000" },
       { "name": "가라아게카레라이스", "price": "11000" },
@@ -408,8 +408,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5157,
-    "lng": 127.0348,
+    "lat": 37.514985,
+    "lng": 127.031421,
     "menu": [
       { "name": "우사골순대국밥", "price": "10000" },
       { "name": "우사골수육국밥", "price": "10000" }
@@ -424,8 +424,8 @@
     "distance_desc": "도보 7분",
     "rating": 3,
     "cleanliness": 4,
-    "lat": 37.5136,
-    "lng": 127.0311,
+    "lat": 37.51493,
+    "lng": 127.030078,
     "menu": [
       { "name": "하와이클래식참치&아보카도포케", "price": "14500" },
       { "name": "튜나&샐몬포케", "price": "13500" },
@@ -441,8 +441,8 @@
     "distance_desc": "도보 6분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5173,
-    "lng": 127.036,
+    "lat": 37.516441,
+    "lng": 127.03136,
     "menu": [
       { "name": "평양냉면", "price": "16000" },
       { "name": "평양비빔냉면", "price": "16000" },
@@ -458,8 +458,8 @@
     "distance_desc": "도보 6분",
     "rating": 5,
     "cleanliness": 4,
-    "lat": 37.518,
-    "lng": 127.0358,
+    "lat": 37.516531,
+    "lng": 127.033708,
     "menu": [
       { "name": "전복삼계탕", "price": "21000" },
       { "name": "진삼계탕", "price": "19000" },
@@ -475,8 +475,8 @@
     "distance_desc": "도보 3분",
     "rating": 5,
     "cleanliness": 3,
-    "lat": 37.5169,
-    "lng": 127.034,
+    "lat": 37.51572,
+    "lng": 127.035004,
     "menu": [
       { "name": "남자탕", "price": "10000" },
       { "name": "한방탕", "price": "13000" },
@@ -492,8 +492,8 @@
     "distance_desc": "도보 7분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.5182,
-    "lng": 127.0371,
+    "lat": 37.517047,
+    "lng": 127.034115,
     "menu": [
       { "name": "멸치칼국수", "price": "11000" },
       { "name": "콩국수", "price": "12000" },
@@ -509,8 +509,8 @@
     "distance_desc": "도보 4분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5152,
-    "lng": 127.0345,
+    "lat": 37.515402,
+    "lng": 127.031672,
     "menu": [
       { "name": "짜장면", "price": "9000" },
       { "name": "해물짬뽕", "price": "11000" },
@@ -526,8 +526,8 @@
     "distance_desc": "도보 6분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.515,
-    "lng": 127.0294,
+    "lat": 37.51427,
+    "lng": 127.030395,
     "menu": [
       { "name": "아메리카노", "price": "4700" }
     ],
@@ -541,8 +541,8 @@
     "distance_desc": "도보 2분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.517,
-    "lng": 127.0334,
+    "lat": 37.514974,
+    "lng": 127.033114,
     "menu": [
       { "name": "아메리카노", "price": "3200" }
     ],
@@ -556,8 +556,8 @@
     "distance_desc": "도보 10분",
     "rating": 5,
     "cleanliness": 4,
-    "lat": 37.5123,
-    "lng": 127.0275,
+    "lat": 37.513795,
+    "lng": 127.028132,
     "menu": [
       { "name": "아메리카노", "price": "4000" }
     ],
@@ -571,8 +571,8 @@
     "distance_desc": "도보 7분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.5135,
-    "lng": 127.0307,
+    "lat": 37.514658,
+    "lng": 127.030796,
     "menu": [
       { "name": "아메리카노", "price": "4700" }
     ],
@@ -586,8 +586,8 @@
     "distance_desc": "도보 7분",
     "rating": 5,
     "cleanliness": 4,
-    "lat": 37.5129,
-    "lng": 127.0321,
+    "lat": 37.517395,
+    "lng": 127.03228,
     "menu": [
       { "name": "아메리카노", "price": "1600" }
     ],
@@ -601,8 +601,8 @@
     "distance_desc": "도보 9분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5113,
-    "lng": 127.0315,
+    "lat": 37.519289,
+    "lng": 127.031186,
     "menu": [
       { "name": "아메리카노", "price": "2000" }
     ],
@@ -616,8 +616,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.5141,
-    "lng": 127.0323,
+    "lat": 37.515686,
+    "lng": 127.030238,
     "menu": [],
     "photo": "images/food39.png",
     "reviews": ["메뉴가 다양해서 좋아요.", "간단하게 식사하기 좋은 곳."]
@@ -629,8 +629,8 @@
     "distance_desc": "도보 6분",
     "rating": 3,
     "cleanliness": 3,
-    "lat": 37.5136,
-    "lng": 127.0327,
+    "lat": 37.516604,
+    "lng": 127.032045,
     "menu": [
       { "name": "시오라멘", "price": "11000" },
       { "name": "기본돈까스", "price": "13000" },
@@ -646,8 +646,8 @@
     "distance_desc": "도보 9분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5115,
-    "lng": 127.033,
+    "lat": 37.518334,
+    "lng": 127.029994,
     "menu": [],
     "photo": "images/food41.png",
     "reviews": ["반찬이 정갈하고 맛있어요.", "든든한 한 끼 식사로 최고."]
@@ -659,8 +659,8 @@
     "distance_desc": "도보 3분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5172,
-    "lng": 127.0337,
+    "lat": 37.515777,
+    "lng": 127.033441,
     "menu": [
       { "name": "나주곰탕", "price": "10000" },
       { "name": "설렁탕", "price": "11000" },
@@ -676,8 +676,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5156,
-    "lng": 127.0354,
+    "lat": 37.515257,
+    "lng": 127.032651,
     "menu": [
       { "name": "콩나물국밥", "price": "9000" },
       { "name": "수제돈가스", "price": "11000" },
@@ -693,8 +693,8 @@
     "distance_desc": "도보 8분",
     "rating": 5,
     "cleanliness": 4,
-    "lat": 37.5145,
-    "lng": 127.0284,
+    "lat": 37.514197,
+    "lng": 127.029574,
     "menu": [],
     "photo": "images/food44.png",
     "reviews": ["내 마음대로 만들어 먹을 수 있어서 좋아요.", "야채가 신선해서 맛있어요."]
@@ -706,8 +706,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5194,
-    "lng": 127.032,
+    "lat": 37.517069,
+    "lng": 127.030425,
     "menu": [
       { "name": "토브버거", "price": "5900" },
       { "name": "불고기치즈버거", "price": "6900" },
@@ -723,8 +723,8 @@
     "distance_desc": "도보 5분",
     "rating": 4,
     "cleanliness": 4,
-    "lat": 37.5141,
-    "lng": 127.0335,
+    "lat": 37.516527,
+    "lng": 127.032086,
     "menu": [
       { "name": "아메리카노", "price": "4700" },
       { "name": "온더벨", "price": "6000" },
@@ -740,8 +740,8 @@
     "distance_desc": "도보 7분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5133,
-    "lng": 127.0328,
+    "lat": 37.516352,
+    "lng": 127.031609,
     "menu": [
       { "name": "치폴레클럽샌드위치", "price": "12900" },
       { "name": "오믈렛샌드위치", "price": "11900" },
@@ -757,8 +757,8 @@
     "distance_desc": "도보 9분",
     "rating": 5,
     "cleanliness": 4,
-    "lat": 37.5204,
-    "lng": 127.0374,
+    "lat": 37.518611,
+    "lng": 127.031734,
     "menu": [
       { "name": "에그타르트", "price": "3500" },
       { "name": "두바이초코마들렌", "price": "4000" },
@@ -774,8 +774,8 @@
     "distance_desc": "도보 6분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5136,
-    "lng": 127.0327,
+    "lat": 37.516505,
+    "lng": 127.032034,
     "menu": [
       { "name": "아메리카노", "price": "4800" }
     ],
@@ -789,8 +789,8 @@
     "distance_desc": "도보 9분",
     "rating": 5,
     "cleanliness": 3,
-    "lat": 37.5113,
-    "lng": 127.0321,
+    "lat": 37.51971,
+    "lng": 127.031879,
     "menu": [
       { "name": "해물칼국수", "price": "9000" },
       { "name": "해물수제비", "price": "9000" },
@@ -806,8 +806,8 @@
     "distance_desc": "도보 7분",
     "rating": 4,
     "cleanliness": 3,
-    "lat": 37.5187,
-    "lng": 127.0367,
+    "lat": 37.516002,
+    "lng": 127.032653,
     "menu": [
       { "name": "낙지비빔밥", "price": "12000" },
       { "name": "제육덮밥", "price": "10000" },
@@ -823,14 +823,14 @@
     "distance_desc": "도보 9분",
     "rating": 5,
     "cleanliness": 4,
-    "lat": 37.5218,
-    "lng": 127.0345,
+    "lat": 37.520313,
+    "lng": 127.031877,
     "menu": [
       { "name": "떡볶이", "price": "5000" },
       { "name": "순대", "price": "5000" },
       { "name": "튀김", "price": "5000" }
     ],
     "photo": "images/food52.png",
-    "reviews": ["옛날 학교 앞 떡볶이 맛이에요.", "저렴하고 맛있어요!"]
+    "reviews": ["싸다김밥 싸다구 날리는 맛! 근데 좀 짬", "옛날 학교 앞 떡볶이 맛이에요.", "저렴하고 맛있어요!"]
   }
 ]
