@@ -884,23 +884,6 @@
     ],
     "photo": "images/food/52.png",
     "reviews": ["싸다김밥 싸다구 날리는 맛! 근데 좀 짬", "옛날 학교 앞 떡볶이 맛이에요.", "저렴하고 맛있어요!"]
-  },
-  {
-    "id": 53,
-    "category": 2,
-    "name": "쪼가리",
-    "type": "주점",
-    "distance_desc": "도보 30분",
-    "rating": 4,
-    "cleanliness": 3,
-    "lat": 37.5076551,
-    "lng": 127.0256975,
-    "menu": [
-      { "name": "고추장찌개", "price": "25000" },
-      { "name": "소고기육전", "price": "25000" }
-    ],
-    "photo": "images/bar/1.png",
-    "reviews": ["김재중 왔다감", "TXT 김태현 왔다감"]
   }
 ]
 
