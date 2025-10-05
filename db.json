@@ -1,7 +1,6 @@
 [
   {
     "id": 1,
-    "category": 1,
     "name": "학동수제비",
     "type": "한식",
     "distance_desc": "도보 4분",
@@ -14,12 +13,11 @@
       { "name": "김치수제비", "price": "10000" },
       { "name": "들깨수제비", "price": "10000" }
     ],
-    "photo": "images/food/1.png",
+    "photo": "images/food1.png",
     "reviews": ["수제비가 쫄깃하고 맛있어요.", "국물이 시원해서 해장용으로 딱입니다.", "점심시간에 사람이 많아요."]
   },
   {
     "id": 2,
-    "category": 1,
     "name": "이태리부대찌개",
     "type": "한식",
     "distance_desc": "도보 3분",
@@ -31,12 +29,11 @@
       { "name": "부대찌개", "price": "10000" },
       { "name": "부대전골", "price": "11000" }
     ],
-    "photo": "images/food/2.png",
+    "photo": "images/food2.png",
     "reviews": ["햄이 푸짐하게 들어있어서 좋아요!", "밥이랑 라면사리 무한리필 최고!", "가성비 좋은 점심식사였습니다."]
   },
   {
     "id": 3,
-    "category": 1,
     "name": "동천홍",
     "type": "중식",
     "distance_desc": "도보 4분",
@@ -49,12 +46,11 @@
       { "name": "짬뽕", "price": "11000" },
       { "name": "차돌짬뽕", "price": "14000" }
     ],
-    "photo": "images/food/3.png",
+    "photo": "images/food3.png",
     "reviews": ["음식이 깔끔하고 맛있습니다.", "홀이 넓어서 단체로 가기 좋아요."]
   },
   {
     "id": 4,
-    "category": 1,
     "name": "홍명",
     "type": "중식",
     "distance_desc": "도보 5분",
@@ -67,12 +63,11 @@
       { "name": "간짜장", "price": "11000" },
       { "name": "짬뽕", "price": "11000" }
     ],
-    "photo": "images/food/4.png",
+    "photo": "images/food4.png",
     "reviews": ["옛날 느낌의 중식당이에요.", "간짜장이 맛있습니다."]
   },
   {
     "id": 5,
-    "category": 1,
     "name": "논현삼겹",
     "type": "한식",
     "distance_desc": "도보 5분",
@@ -85,12 +80,11 @@
       { "name": "돼지불백정식", "price": "12000" },
       { "name": "돼지김치찌개", "price": "12000" }
     ],
-    "photo": "images/food/5.png",
+    "photo": "images/food5.png",
     "reviews": ["고기가 신선하고 두툼해요.", "직원분들이 친절하고 고기도 구워주셔서 편해요.", "회식 장소로 추천합니다."]
   },
   {
     "id": 6,
-    "category": 1,
     "name": "롯데리아",
     "type": "패스트푸드",
     "distance_desc": "도보 2분",
@@ -99,12 +93,11 @@
     "lat": 37.515184,
     "lng": 127.033174,
     "menu": [],
-    "photo": "images/food/6.png",
+    "photo": "images/food6.png",
     "reviews": ["간단하게 한 끼 해결하기 좋아요.", "음식이 빨리 나와서 좋습니다."]
   },
   {
     "id": 7,
-    "category": 1,
     "name": "맘스터치",
     "type": "패스트푸드",
     "distance_desc": "도보 1분",
@@ -113,12 +106,11 @@
     "lat": 37.515003,
     "lng": 127.032663,
     "menu": [],
-    "photo": "images/food/7.png",
+    "photo": "images/food7.png",
     "reviews": ["역시 치킨버거는 맘스터치!", "주문 즉시 만들어서 조금 기다려야 하지만 맛있어요."]
   },
   {
     "id": 8,
-    "category": 1,
     "name": "KFC",
     "type": "패스트푸드",
     "distance_desc": "도보 2분",
@@ -127,12 +119,11 @@
     "lat": 37.515067,
     "lng": 127.033054,
     "menu": [],
-    "photo": "images/food/8.png",
+    "photo": "images/food8.png",
     "reviews": ["치킨이 바삭하고 맛있어요.", "비스켓은 꼭 드세요!"]
   },
   {
     "id": 9,
-    "category": 1,
     "name": "헤야",
     "type": "일식",
     "distance_desc": "도보 6분",
@@ -145,12 +136,11 @@
       { "name": "온나노함박스테이크", "price": "12000" },
       { "name": "카레함박스테이크", "price": "12000" }
     ],
-    "photo": "images/food/9.png",
+    "photo": "images/food9.png",
     "reviews": ["해산물이 정말 신선하고 푸짐합니다.", "웨이팅이 있지만 기다릴 가치가 있어요.", "분위기가 좋아서 데이트하기에도 좋아요."]
   },
   {
     "id": 10,
-    "category": 1,
     "name": "류몽민",
     "type": "중식",
     "distance_desc": "도보 5분",
@@ -163,12 +153,11 @@
       { "name": "갈릭직화닭갈비", "price": "(런치)11000" },
       { "name": "고소면", "price": "9500" }
     ],
-    "photo": "images/food/10.png",
+    "photo": "images/food10.png",
     "reviews": ["탕수육이 정말 바삭하고 맛있어요.", "인생 탕수육입니다!"]
   },
   {
     "id": 11,
-    "category": 1,
     "name": "완도상회",
     "type": "한식",
     "distance_desc": "도보 6분",
@@ -180,12 +169,11 @@
       { "name": "반반치킨", "price": "19900" },
       { "name": "시장통닭", "price": "15000" }
     ],
-    "photo": "images/food/11.png",
+    "photo": "images/food11.png",
     "reviews": ["해산물이 싱싱해요.", "점심에 먹기엔 가격이 좀 있네요."]
   },
   {
     "id": 12,
-    "category": 1,
     "name": "미가한우 치킨처럼",
     "type": "한식",
     "distance_desc": "도보 5분",
@@ -194,12 +182,11 @@
     "lat": 37.515876,
     "lng": 127.030592,
     "menu": [],
-    "photo": "images/food/12.png",
+    "photo": "images/food12.png",
     "reviews": ["점심특선 가성비가 좋아요.", "반찬이 깔끔하고 맛있습니다."]
   },
   {
     "id": 13,
-    "category": 1,
     "name": "담미온",
     "type": "한식",
     "distance_desc": "도보 5분",
@@ -212,12 +199,11 @@
       { "name": "순대국밥", "price": "10000" },
       { "name": "얼큰국밥", "price": "10000" }
     ],
-    "photo": "images/food/13.png",
+    "photo": "images/food13.png",
     "reviews": ["24시간이라 언제든 갈 수 있어서 좋아요.", "국물이 진하고 맛있습니다.", "혼밥하기 좋은 곳."]
   },
   {
     "id": 14,
-    "category": 1,
     "name": "명동 칼국수 샤브샤브",
     "type": "한식",
     "distance_desc": "도보 5분",
@@ -229,12 +215,11 @@
       { "name": "칼국수보쌈정식", "price": "12000" },
       { "name": "칼국수제육정식", "price": "11000" }
     ],
-    "photo": "images/food/14.png",
+    "photo": "images/food14.png",
     "reviews": ["칼칼한 국물이 일품이에요.", "볶음밥은 꼭 먹어야 합니다.", "언제나 사람이 많아요."]
   },
   {
     "id": 15,
-    "category": 1,
     "name": "코너힐그로서리",
     "type": "카페",
     "distance_desc": "도보 3분",
@@ -247,12 +232,11 @@
       { "name": "카페라떼", "price": "4500" },
       { "name": "코너힐커피", "price": "5500" }
     ],
-    "photo": "images/food/15.png",
+    "photo": "images/food15.png",
     "reviews": ["커피도 맛있고 빵도 맛있어요.", "분위기가 좋아서 브런치하기 좋아요."]
   },
   {
     "id": 16,
-    "category": 1,
     "name": "투고샐러드",
     "type": "샐러드&샌드위치",
     "distance_desc": "도보 8분",
@@ -265,12 +249,11 @@
       { "name": "치폴레파스타샐러드", "price": "8500" },
       { "name": "갈릭치킨그랩샐러드", "price": "6900" }
     ],
-    "photo": "images/food/16.png",
+    "photo": "images/food16.png",
     "reviews": ["🌟동훈쌤 1pick!🌟.", "가볍게 먹고 싶을 때 자주 가요.", "토핑 추가해서 먹으면 더 맛있어요."]
   },
   {
     "id": 17,
-    "category": 1,
     "name": "샐러디",
     "type": "샐러드&샌드위치",
     "distance_desc": "도보 9분",
@@ -283,12 +266,11 @@
       { "name": "칠리베이컨포케", "price": "8900" },
       { "name": "맥시칸랩샌드위치", "price": null }
     ],
-    "photo": "images/food/17.png",
+    "photo": "images/food17.png",
     "reviews": ["다양한 메뉴가 있어서 좋아요.", "웜볼이 든든하고 맛있어요."]
   },
   {
     "id": 18,
-    "category": 1,
     "name": "본죽",
     "type": "한식",
     "distance_desc": "도보 9분",
@@ -301,12 +283,11 @@
       { "name": "쇠고기야채죽", "price": "12000" },
       { "name": "김치낙지죽", "price": "12500" }
     ],
-    "photo": "images/food/18.png",
+    "photo": "images/food18.png",
     "reviews": ["속이 안 좋을 때 최고에요.", "깔끔하고 든든합니다."]
   },
   {
     "id": 19,
-    "category": 1,
     "name": "미아사이공",
     "type": "아시안",
     "distance_desc": "도보 4분",
@@ -319,12 +300,11 @@
       { "name": "분짜", "price": "15000" },
       { "name": "껌승", "price": "14000" }
     ],
-    "photo": "images/food/19.png",
+    "photo": "images/food19.png",
     "reviews": ["국물이 진하고 맛있어요.", "현지 느낌 나는 쌀국수집이에요."]
   },
   {
     "id": 20,
-    "category": 1,
     "name": "하남돼지",
     "type": "한식",
     "distance_desc": "도보 5분",
@@ -333,12 +313,11 @@
     "lat": 37.516489,
     "lng": 127.033629,
     "menu": [],
-    "photo": "images/food/20.png",
+    "photo": "images/food20.png",
     "reviews": ["고기를 다 구워줘서 편하고 좋아요.", "명이나물이랑 같이 먹으면 꿀맛!"]
   },
   {
     "id": 21,
-    "category": 1,
     "name": "물고기자리",
     "type": "일식",
     "distance_desc": "도보 5분",
@@ -351,12 +330,11 @@
       { "name": "삼치구이", "price": "12000" },
       { "name": "갈치조림", "price": "13000" }
     ],
-    "photo": "images/food/21.png",
+    "photo": "images/food21.png",
     "reviews": ["회가 신선하고 맛있어요.", "가성비 좋은 횟집입니다."]
   },
   {
     "id": 22,
-    "category": 1,
     "name": "카츠공방",
     "type": "일식",
     "distance_desc": "도보 6분",
@@ -369,12 +347,11 @@
       { "name": "치즈카츠", "price": "14000" },
       { "name": "마제소바", "price": "11000" }
     ],
-    "photo": "images/food/22.png",
+    "photo": "images/food22.png",
     "reviews": ["고기가 두툼하고 부드러워요.", "튀김이 바삭하고 맛있습니다."]
   },
   {
     "id": 23,
-    "category": 1,
     "name": "우제홍 초밥",
     "type": "일식",
     "distance_desc": "도보 8분",
@@ -387,12 +364,11 @@
       { "name": "모밀정식", "price": "11000" },
       { "name": "라멘정식", "price": "11000" }
     ],
-    "photo": "images/food/23.png",
+    "photo": "images/food23.png",
     "reviews": ["가성비 좋은 초밥집.", "회가 길고 두툼해요."]
   },
   {
     "id": 24,
-    "category": 1,
     "name": "코마츠",
     "type": "일식",
     "distance_desc": "도보 4분",
@@ -405,12 +381,11 @@
       { "name": "소유라멘", "price": "11000" },
       { "name": "시오라멘", "price": "11000" }
     ],
-    "photo": "images/food/24.png",
+    "photo": "images/food24.png",
     "reviews": ["국물이 진하고 맛있어요.", "일본 현지에서 먹는 느낌이에요."]
   },
   {
     "id": 25,
-    "category": 1,
     "name": "토가라시",
     "type": "일식",
     "distance_desc": "도보 7분",
@@ -423,12 +398,11 @@
       { "name": "가라아게카레라이스", "price": "11000" },
       { "name": "토가라시동", "price": "11000" }
     ],
-    "photo": "images/food/25.png",
+    "photo": "images/food25.png",
     "reviews": ["마제소바가 정말 맛있어요.", "밥 비벼 먹는 게 별미입니다."]
   },
   {
     "id": 26,
-    "category": 1,
     "name": "가마솥순대국밥",
     "type": "한식",
     "distance_desc": "도보 5분",
@@ -440,12 +414,11 @@
       { "name": "우사골순대국밥", "price": "10000" },
       { "name": "우사골수육국밥", "price": "10000" }
     ],
-    "photo": "images/food/26.png",
+    "photo": "images/food26.png",
     "reviews": ["든든한 국밥 한 그릇.", "김치가 맛있어서 국밥이랑 잘 어울려요."]
   },
   {
     "id": 27,
-    "category": 1,
     "name": "알로하포케",
     "type": "샐러드&샌드위치",
     "distance_desc": "도보 7분",
@@ -458,12 +431,11 @@
       { "name": "튜나&샐몬포케", "price": "13500" },
       { "name": "도토리이베리코포케", "price": "14500" }
     ],
-    "photo": "images/food/27.png",
+    "photo": "images/food27.png",
     "reviews": ["신선하고 건강한 맛!", "재료 조합이 좋고 맛있어요."]
   },
   {
     "id": 28,
-    "category": 1,
     "name": "향동가",
     "type": "중식",
     "distance_desc": "도보 6분",
@@ -476,12 +448,11 @@
       { "name": "평양비빔냉면", "price": "16000" },
       { "name": "향동곰탕", "price": "15000" }
     ],
-    "photo": "images/food/28.png",
+    "photo": "images/food28.png",
     "reviews": ["고추짜장이 매콤하니 맛있어요.", "양도 푸짐하고 좋습니다."]
   },
   {
     "id": 29,
-    "category": 1,
     "name": "진전복삼계탕",
     "type": "한식",
     "distance_desc": "도보 6분",
@@ -494,12 +465,11 @@
       { "name": "진삼계탕", "price": "19000" },
       { "name": "누룽지삼계탕", "price": "20000" }
     ],
-    "photo": "images/food/29.png",
+    "photo": "images/food29.png",
     "reviews": ["몸보신하기 좋은 곳.", "국물이 진하고 건강해지는 맛이에요."]
   },
   {
     "id": 30,
-    "category": 1,
     "name": "남자탕",
     "type": "한식",
     "distance_desc": "도보 3분",
@@ -512,12 +482,11 @@
       { "name": "한방탕", "price": "13000" },
       { "name": "순살감자탕", "price": "11000" }
     ],
-    "photo": "images/food/30.png",
+    "photo": "images/food30.png",
     "reviews": ["국물이 정말 진국입니다.", "김치랑 깍두기가 맛있어요."]
   },
   {
     "id": 31,
-    "category": 1,
     "name": "가람국시",
     "type": "한식",
     "distance_desc": "도보 7분",
@@ -530,12 +499,11 @@
       { "name": "콩국수", "price": "12000" },
       { "name": "소고기칼국수", "price": "12000" }
     ],
-    "photo": "images/food/31.png",
+    "photo": "images/food31.png",
     "reviews": ["만두가 크고 맛있어요.", "국물이 깔끔합니다."]
   },
   {
     "id": 32,
-    "category": 1,
     "name": "난랑",
     "type": "중식",
     "distance_desc": "도보 4분",
@@ -548,12 +516,11 @@
       { "name": "해물짬뽕", "price": "11000" },
       { "name": "옛날볶음밥", "price": "10000" }
     ],
-    "photo": "images/food/32.png",
+    "photo": "images/food32.png",
     "reviews": ["요리가 맛있는 중식당.", "분위기가 고급스러워요."]
   },
   {
     "id": 33,
-    "category": 1,
     "name": "투썸플레이스",
     "type": "카페",
     "distance_desc": "도보 6분",
@@ -564,12 +531,11 @@
     "menu": [
       { "name": "아메리카노", "price": "4700" }
     ],
-    "photo": "images/food/33.png",
+    "photo": "images/food33.png",
     "reviews": ["케이크가 맛있어요.", "매장이 넓어서 좋아요."]
   },
   {
     "id": 34,
-    "category": 1,
     "name": "이디야커피",
     "type": "카페",
     "distance_desc": "도보 2분",
@@ -580,12 +546,11 @@
     "menu": [
       { "name": "아메리카노", "price": "3200" }
     ],
-    "photo": "images/food/34.png",
+    "photo": "images/food34.png",
     "reviews": ["가성비 좋은 커피!", "간단히 커피 마시기 좋아요."]
   },
   {
     "id": 35,
-    "category": 1,
     "name": "파퓰러커피",
     "type": "카페",
     "distance_desc": "도보 10분",
@@ -596,12 +561,11 @@
     "menu": [
       { "name": "아메리카노", "price": "4000" }
     ],
-    "photo": "images/food/35.png",
+    "photo": "images/food35.png",
     "reviews": ["커피 맛이 좋아요.", "조용하고 분위기 있습니다."]
   },
   {
     "id": 36,
-    "category": 1,
     "name": "스타벅스",
     "type": "카페",
     "distance_desc": "도보 7분",
@@ -610,14 +574,13 @@
     "lat": 37.514658,
     "lng": 127.030796,
     "menu": [
-      { "name": "아메리카но", "price": "4700" }
+      { "name": "아메리카노", "price": "4700" }
     ],
-    "photo": "images/food/36.png",
+    "photo": "images/food36.png",
     "reviews": ["믿고 마시는 스타벅스.", "매장이 넓고 쾌적해요."]
   },
   {
     "id": 37,
-    "category": 1,
     "name": "메머드커피",
     "type": "카페",
     "distance_desc": "도보 7분",
@@ -628,12 +591,11 @@
     "menu": [
       { "name": "아메리카노", "price": "1600" }
     ],
-    "photo": "images/food/37.png",
+    "photo": "images/food37.png",
     "reviews": ["양이 정말 많고 저렴해요.", "가성비 최고입니다."]
   },
   {
     "id": 38,
-    "category": 1,
     "name": "빽다방",
     "type": "카페",
     "distance_desc": "도보 9분",
@@ -644,12 +606,11 @@
     "menu": [
       { "name": "아메리카노", "price": "2000" }
     ],
-    "photo": "images/food/38.png",
+    "photo": "images/food38.png",
     "reviews": ["저렴하고 양 많아요.", "달달한 커피가 땡길 때 좋아요."]
   },
   {
     "id": 39,
-    "category": 1,
     "name": "싸다김밥",
     "type": "분식",
     "distance_desc": "도보 5분",
@@ -658,12 +619,11 @@
     "lat": 37.515686,
     "lng": 127.030238,
     "menu": [],
-    "photo": "images/food/39.png",
+    "photo": "images/food39.png",
     "reviews": ["메뉴가 다양해서 좋아요.", "간단하게 식사하기 좋은 곳."]
   },
   {
     "id": 40,
-    "category": 1,
     "name": "돈앤동",
     "type": "한식",
     "distance_desc": "도보 6분",
@@ -676,12 +636,11 @@
       { "name": "기본돈까스", "price": "13000" },
       { "name": "매콤미소라멘", "price": "11000" }
     ],
-    "photo": "images/food/40.png",
+    "photo": "images/food40.png",
     "reviews": ["가성비 좋은 백반집.", "집밥 같은 느낌이에요."]
   },
   {
     "id": 41,
-    "category": 1,
     "name": "식당민홍",
     "type": "한식",
     "distance_desc": "도보 9분",
@@ -690,12 +649,11 @@
     "lat": 37.518334,
     "lng": 127.029994,
     "menu": [],
-    "photo": "images/food/41.png",
+    "photo": "images/food41.png",
     "reviews": ["반찬이 정갈하고 맛있어요.", "든든한 한 끼 식사로 최고."]
   },
   {
     "id": 42,
-    "category": 1,
     "name": "나주곰탕 학동점",
     "type": "한식",
     "distance_desc": "도보 3분",
@@ -708,12 +666,11 @@
       { "name": "설렁탕", "price": "11000" },
       { "name": "얼큰곰탕", "price": "9500" }
     ],
-    "photo": "images/food/42.png",
+    "photo": "images/food42.png",
     "reviews": ["국물이 맑고 깔끔해요.", "뜨끈한 국물이 생각날 때 가요."]
   },
   {
     "id": 43,
-    "category": 1,
     "name": "콩뿌리 콩나물국밥",
     "type": "한식",
     "distance_desc": "도보 5분",
@@ -726,12 +683,11 @@
       { "name": "수제돈가스", "price": "11000" },
       { "name": "비빔국수", "price": "9000" }
     ],
-    "photo": "images/food/43.png",
+    "photo": "images/food43.png",
     "reviews": ["해장하기 딱 좋아요.", "저렴하고 든든하게 먹을 수 있어요."]
   },
   {
     "id": 44,
-    "category": 1,
     "name": "써브웨이",
     "type": "샐러드&샌드위치",
     "distance_desc": "도보 8분",
@@ -740,12 +696,11 @@
     "lat": 37.514197,
     "lng": 127.029574,
     "menu": [],
-    "photo": "images/food/44.png",
+    "photo": "images/food44.png",
     "reviews": ["내 마음대로 만들어 먹을 수 있어서 좋아요.", "야채가 신선해서 맛있어요."]
   },
   {
     "id": 45,
-    "category": 1,
     "name": "토브",
     "type": "카페",
     "distance_desc": "도보 5분",
@@ -758,12 +713,11 @@
       { "name": "불고기치즈버거", "price": "6900" },
       { "name": "베이컨치즈버거", "price": "7800" }
     ],
-    "photo": "images/food/45.png",
+    "photo": "images/food45.png",
     "reviews": ["커피가 정말 맛있어요.", "분위기가 아늑하고 좋습니다."]
   },
   {
     "id": 46,
-    "category": 1,
     "name": "씨벨커피",
     "type": "카페",
     "distance_desc": "도보 5분",
@@ -776,12 +730,11 @@
       { "name": "온더벨", "price": "6000" },
       { "name": "씨벨라떼", "price": "6000" }
     ],
-    "photo": "images/food/46.png",
+    "photo": "images/food46.png",
     "reviews": ["커피 맛이 진하고 고소해요.", "디저트 종류가 다양해요."]
   },
   {
     "id": 47,
-    "category": 1,
     "name": "우프 학동점",
     "type": "카페",
     "distance_desc": "도보 7분",
@@ -794,12 +747,11 @@
       { "name": "오믈렛샌드위치", "price": "11900" },
       { "name": "크로와상샌드위치", "price": "7900" }
     ],
-    "photo": "images/food/47.png",
+    "photo": "images/food47.png",
     "reviews": ["도넛이 정말 맛있어요!", "인테리어가 예뻐서 사진 찍기 좋아요."]
   },
   {
     "id": 48,
-    "category": 1,
     "name": "솔티버터스윗",
     "type": "카페",
     "distance_desc": "도보 9분",
@@ -812,12 +764,11 @@
       { "name": "두바이초코마들렌", "price": "4000" },
       { "name": "말돈소금빵", "price": "3000" }
     ],
-    "photo": "images/food/48.png",
+    "photo": "images/food48.png",
     "reviews": ["소금빵이 정말 맛있어요.", "갓 나온 빵은 최고!"]
   },
   {
     "id": 49,
-    "category": 1,
     "name": "브릭커피",
     "type": "카페",
     "distance_desc": "도보 6분",
@@ -828,12 +779,11 @@
     "menu": [
       { "name": "아메리카노", "price": "4800" }
     ],
-    "photo": "images/food/49.png",
+    "photo": "images/food49.png",
     "reviews": ["커피 맛이 괜찮아요.", "조용해서 작업하기 좋아요."]
   },
   {
     "id": 50,
-    "category": 1,
     "name": "청양해물칼국수",
     "type": "한식",
     "distance_desc": "도보 9분",
@@ -846,12 +796,11 @@
       { "name": "해물수제비", "price": "9000" },
       { "name": "보리밥", "price": "9000" }
     ],
-    "photo": "images/food/50.png",
+    "photo": "images/food50.png",
     "reviews": ["해물이 푸짐하고 국물이 시원해요.", "김치가 맛있어서 칼국수랑 잘 어울려요."]
   },
   {
     "id": 51,
-    "category": 1,
     "name": "사랑채",
     "type": "한식",
     "distance_desc": "도보 7분",
@@ -864,12 +813,11 @@
       { "name": "제육덮밥", "price": "10000" },
       { "name": "고등어구이", "price": "10000" }
     ],
-    "photo": "images/food/51.png",
+    "photo": "images/food51.png",
     "reviews": ["청국장 냄새도 안 나고 구수해요.", "집밥이 생각나는 맛입니다."]
   },
   {
     "id": 52,
-    "category": 1,
     "name": "다모아 분식",
     "type": "분식",
     "distance_desc": "도보 9분",
@@ -882,8 +830,7 @@
       { "name": "순대", "price": "5000" },
       { "name": "튀김", "price": "5000" }
     ],
-    "photo": "images/food/52.png",
+    "photo": "images/food52.png",
     "reviews": ["싸다김밥 싸다구 날리는 맛! 근데 좀 짬", "옛날 학교 앞 떡볶이 맛이에요.", "저렴하고 맛있어요!"]
   }
 ]
-
