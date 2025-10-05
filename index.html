@@ -9,39 +9,55 @@
 </head>
 <body>
 
+    <!-- 화면 1: 시작 화면 -->
     <section id="splash-screen" class="screen active">
+        <div class="stars"></div>
+        <div class="moon"></div>
         <div class="splash-content">
-            <h1>밥 먹고 레벨업! 학동 맛집!</h1>
-            <h2>점심 퀘스트를 시작하라!</h2>
-            <p class="quest-msg">용사여, 숟가락 무기 들고 던전으로 떠나 전리품을 획득하라!</p>
+            <h1 id="splash-title">밥 먹고 레벨업! 학동 맛집!</h1>
+            <h2 id="splash-subtitle">점심 퀘스트를 시작하라!</h2>
+
+            <!-- 다크 모드 토글 스위치 -->
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span id="mode-text">LIGHT MODE</span>
+            </div>
+
+            <p id="splash-quest-msg" class="quest-msg">용사여, 숟가락 무기 들고 던전으로 떠나 전리품을 획득하라!</p>
             <button id="start-btn" class="pixel-btn large touch-to-start">출정 준비!</button>
         </div>
     </section>
 
+    <!-- 화면 2: 지도 화면 -->
     <section id="map-screen" class="screen">
         <div class="container">
             <header>
-                <h1>학동 맛집</h1>
-                <h2>(던전 탐색 준비 완료!)</h2>
+                <h1 id="map-title">학동 맛집</h1>
+                <h2 id="map-subtitle">(던전 탐색 준비 완료!)</h2>
             </header>
             <main>
                 <div id="map"></div>
             </main>
             <footer>
-                <button id="go-to-bestiary-btn" class="pixel-btn">📖 몬스터 도감</button> 
-                <button id="go-to-randomizer-btn" class="pixel-btn">🎲 오늘 점심 보스 몬스터 찾기!</button>
+                <button id="go-to-bestiary-btn" class="pixel-btn">📖 도감</button> 
+                <button id="go-to-randomizer-btn" class="pixel-btn">🎲 오늘의 목적지 찾기!</button>
             </footer>
         </div>
     </section>
 
+    <!-- 화면 3: 도감 화면 -->
     <section id="bestiary-screen" class="screen">
         <div class="container">
             <header>
-                <h1>📖 몬스터 도감</h1>
-                <h2>(학동 던전 출몰 몬스터 리스트)</h2>
+                <h1 id="bestiary-title">📖 몬스터 도감</h1>
+                <h2 id="bestiary-subtitle">(학동 던전 출몰 몬스터 리스트)</h2>
             </header>
             <div id="bestiary-list" class="bestiary-grid">
-                </div>
+                <!-- 도감 카드들이 여기에 동적으로 추가됩니다 -->
+            </div>
             <footer>
                 <button id="back-to-map-from-bestiary-btn" class="pixel-btn">🗺️ 본부로 복귀</button>
             </footer>
@@ -50,38 +66,32 @@
             <div class="modal-content">
                 <span class="close-btn">&times;</span>
                 <div id="modal-body">
-                    </div>
+                    <!-- 상세 정보가 여기에 동적으로 추가됩니다 -->
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- 화면 4: 랜덤 뽑기 화면 -->
     <section id="randomizer-screen" class="screen">
         <div class="container">
             <header>
-                <h1>🎲 오늘의 보스 몬스터 찾기!</h1>
+                <h1 id="randomizer-title">🎲 오늘의 목적지 찾기!</h1>
             </header>
             <div class="randomizer-content">
                 <div class="options">
                     <div class="option-group">
-                        <h2>몬스터 타입 선택(다중 선택 가능)</h2>
+                        <h2 id="randomizer-option-title">몬스터 타입 선택(다중 선택 가능)</h2>
                         <div id="type-btn-group" class="type-btn-group">
-                            <button class="type-btn" data-type="all">전체</button>
-                            <button class="type-btn" data-type="한식">한식</button>
-                            <button class="type-btn" data-type="양식">양식</button>
-                            <button class="type-btn" data-type="중식">중식</button>
-                            <button class="type-btn" data-type="일식">일식</button>
-                            <button class="type-btn" data-type="카페">카페</button>
-                            <button class="type-btn" data-type="아시안">아시안</button>
-                            <button class="type-btn" data-type="패스트푸드">패스트푸드</button>
-                            <button class="type-btn" data-type="분식">분식</button>
-                            <button class="type-btn" data-type="샐러드&샌드위치">샐러드&샌드위치</button>
+                            <!-- 타입 버튼들이 여기에 동적으로 추가됩니다 -->
                         </div>
                     </div>
                 </div>
                 <button id="draw-btn" class="pixel-btn large">✨ 전리품 획득! (뽑기 시작!) ✨</button>
                 
                 <div id="random-results">
-                    </div>
+                    <!-- 결과가 여기에 표시됩니다 -->
+                </div>
             </div>
             <footer>
                 <button id="back-to-map-from-randomizer-btn" class="pixel-btn">🗺️ 본부로 복귀</button>
