@@ -239,8 +239,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
     fetch('db.json')
         .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
-            return response.json();
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text(); // Get response as text first to check for issues
+        })
+        .then(text => {
+            try {
+                return JSON.parse(text); // Manually parse the text
+            } catch (e) {
+                console.error('JSON 파싱 오류:', e);
+                console.error('받은 텍스트:', text);
+                throw new Error('Invalid JSON format');
+            }
         })
         .then(data => {
             allData = data;
@@ -249,8 +260,8 @@ document.addEventListener('DOMContentLoaded', () => {
             handleSwipe();
         })
         .catch(error => {
-            console.error('데이터 로딩 오류:', error);
-            document.body.innerHTML = `<div style="color:white; text-align:center; padding: 50px; font-size: 1.2em;">데이터 파일(db.json)을 로드하지 못했습니다. 파일이 올바른지 확인해주세요.</div>`;
+            console.error('데이터 로딩 또는 처리 오류:', error);
+            document.body.innerHTML = `<div style="color:white; text-align:center; padding: 50px; font-size: 1.2em;">데이터 파일(db.json)을 로드하거나 처리하는 데 실패했습니다. 콘솔을 확인해주세요.</div>`;
         });
     
     showScreen('splash-screen');
